@@ -1,0 +1,43 @@
+@import "../../styles.scss";
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 291px;
+    border-top: solid 4px #70E61C;
+    padding: 121px 100px;
+
+    span {
+        font-size: 23px;
+    }
+}
+
+.logo-imprint{
+    display: flex;
+    flex-direction: column;
+
+    img:hover{
+        cursor: pointer;
+    }
+}
+
+.imprint:hover{
+    cursor: pointer;
+    color: #1CDAE6;
+}
+
+.socials {
+    display: flex;
+    gap: 42px;
+
+    img {
+        width: 30px;
+
+        &:hover {
+            cursor: pointer;
+            transition: transform 200ms ease-in-out;
+            transform: scale(1.3);
+        }
+    }
+}
