@@ -1,0 +1,70 @@
+@import "../../../styles.scss";
+
+section {
+    display: flex;
+    background-image: url(./../../../assets/img/forms/photo-shadows.png);
+    background-repeat: no-repeat;
+    background-position-x: -150px;
+    background-position-y: 70px;
+}
+
+aside {
+    :nth-child(1) {
+        padding-left: 12px;
+    }
+
+    :nth-child(2) {
+        position: absolute;
+        left: 42px;
+        top: 106px;
+        z-index: 5;
+    }
+}
+
+.form {
+    position: absolute;
+    top: 377.6px;
+    // left: 159.5px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    padding-left: -50px;
+
+    :nth-child(1) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.rotText {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    font-size: 64px;
+    font-weight: 400;
+    padding-left: 35px;
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+
+    :nth-child(1) {
+        font-size: 90px;
+        font-weight: 700;
+    }
+
+    :nth-child(2) {
+        font-size: 58px;
+        font-weight: 400;
+        color: rgba(151, 71, 255, 1);
+    }
+}
+
+.btnPos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
