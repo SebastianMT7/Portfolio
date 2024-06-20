@@ -1,37 +1,28 @@
-@import "../../../styles.scss";
+
 
 section {
     display: flex;
     background-image: url(./../../../assets/img/forms/photo-shadows.png);
     background-repeat: no-repeat;
-    background-position-x: -150px;
+    background-position-x: -100px;
     background-position-y: 70px;
+    max-width: 1440px;
+    padding-right: 100px;
 }
 
 aside {
-    :nth-child(1) {
-        padding-left: 12px;
-    }
-
-    :nth-child(2) {
-        position: absolute;
-        left: 42px;
-        top: 106px;
-        z-index: 5;
-    }
-}
-
-.form {
-    position: absolute;
-    top: 377.6px;
-    // left: 159.5px;
+    padding-left: 42px;
+    z-index: 5;
+    max-width: 590px;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
     gap: 44px;
-    padding-left: -50px;
+    z-index: 10;
 
     :nth-child(1) {
         display: flex;
@@ -54,12 +45,14 @@ main {
     :nth-child(1) {
         font-size: 90px;
         font-weight: 700;
+        line-height: 108px;
     }
 
     :nth-child(2) {
         font-size: 58px;
         font-weight: 400;
         color: rgba(151, 71, 255, 1);
+        line-height: 69.6px;
     }
 }
 
@@ -67,4 +60,58 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+.shape {
+    position: absolute;
+    top: 380px;
+    // left: 159.5px;
+    z-index: -1;
+}
+
+.line {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(151, 71, 255, 1);
+    border-radius: 0 2px 2px 0;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    gap: 42px;
+    padding-top: 50px;
+
+    img {
+        width: 30px;
+
+        &:hover {
+            cursor: pointer;
+            transition: transform 200ms ease-in-out;
+            transform: scale(1.3);
+        }
+    }
+}
+
+.scrollDown {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1316px;
+    top: 773px;
+    height: 160px;
+    writing-mode: vertical-lr;
+    line-height: 27.6px;
+    gap: 3;
+
+    img{
+        width: 24px;
+    }
+}
+
+.shadowPurple{
+    position: absolute;
+    top: 773px;
+    left: 1316px;
 }

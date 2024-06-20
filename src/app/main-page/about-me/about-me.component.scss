@@ -1,0 +1,38 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 138px 0 178px 100px;
+    gap: 35px;
+
+    span {
+        font-size: 90px;
+        font-weight: 700;
+    }
+
+    p {
+        // word-break: break-all;
+    }
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    div {
+        display: flex;
+        padding-left: 27px;
+        gap: 35px;
+    }
+
+    img {
+        height: 50px;
+    }
+
+}
