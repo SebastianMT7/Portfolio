@@ -1,40 +1,57 @@
-main {
+@import './../../../styles.scss';
+
+section {
+    @include dFlex($ai: null, $jc: null, $gap:48px);
+    padding-left: 100px;
+    position: relative;
+}
+
+.skillList {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: 700;
+    gap: 54px;
+
+    div {
+        @include dFlex($fd: column, $gap:10px);
+        width: 130px;
+    }
+
+    img {
+        height: 60px;
+        transition: transform 300ms ease-in-out;
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
 }
 
 aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 57px;
-
+    @include dFlex($fd: column, $gap:57px);
+    min-width: 571px;
 }
 
-.asideTop{
+.asideTop {
     display: flex;
     flex-direction: column;
     gap: 34px;
 }
 
-.headlineSkills{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 42px;
-
-    span{
-        font-size: 90px;
-        font-weight: 700;
-    }
+.headlineSkills {
+    @include dFlex($gap:42px, $jc:space-between);
 }
 
 .line {
     width: 58px;
     height: 4px;
-    background-color: rgba(151, 71, 255, 1);
+    background-color: $purple;
     border-radius: 2px 0 0 2px;
+}
+
+.greenShadow{
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: -1;
 }

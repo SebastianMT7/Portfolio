@@ -1,0 +1,108 @@
+@import './../../../styles.scss';
+
+section {
+    // @include dFlex($fd:column);
+    padding-top: 175px;
+    position: relative;
+}
+
+.head {
+    //@include dFlex($jc:null,$fd:column, $gap:36px);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.headline {
+    // @include dFlex($jc: null, $gap:36px);
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.shortLine {
+    background-color: $purple;
+    width: 109px;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.bigLine {
+    background-color: $purple;
+    width: 309px;
+    height: 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+main {
+    @include dFlex($fd: column);
+    padding: 0 100px;
+}
+
+.projectCard {
+    @include dFlex($gap: 35px);
+
+    :nth-child(1) {
+        @include dFlex($jc:null, $ai: null, $fd: column, $gap: 15px);
+    }
+}
+
+.reverseRow {
+    flex-direction: row-reverse;
+}
+
+.description {
+    :nth-child(1) {
+        font-size: 32px;
+        font-weight: 700;
+        color: $purple;
+    }
+
+    :nth-child(2) {
+        font-size: 23px;
+        font-weight: 400;
+        color: $green;
+    }
+}
+
+.buttons {
+    display: flex;
+    gap: 86px;
+    padding-top: 35px;
+}
+
+.liveTest {
+    font-size: 23px;
+    background-color: $purple;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    gap: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $green;
+    }
+}
+
+.gitHub {
+    font-size: 23px;
+    background-color: $background;
+    border: 1px solid $green;
+    border-radius: 10px;
+    padding: 15px 30px;
+    gap: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $green;
+    }
+}
+
+.shadowPurple {
+    position: absolute;
+    left: 0;
+    top: 650px;
+    z-index: -1;
+}

@@ -1,29 +1,17 @@
+@import './../../../styles.scss';
+
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include dFlex($gap: 149px);
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    @include dFlex($ai: null, $jc: null, $fd: column, $gap:35px);
     padding: 138px 0 178px 100px;
-    gap: 35px;
 
-    span {
-        font-size: 90px;
-        font-weight: 700;
-    }
-
-    p {
-        // word-break: break-all;
-    }
 }
 
 .infos {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+    @include dFlex($ai: null, $jc: null, $fd: column, $gap:35px);
 
     div {
         display: flex;
@@ -34,5 +22,14 @@ main {
     img {
         height: 50px;
     }
+}
 
+aside {
+    @include dFlex($jc: null);
+}
+
+.greenLine{
+    width: 267px;
+    height: 4px;
+    background-color: $green;
 }

@@ -1,13 +1,14 @@
 <section>
-    <main>
-        <div>
-
+    <main class="skillList">
+        <div *ngFor="let skill of skillList">
+            <img src="{{ skill.img }}" alt="">
+            <span>{{ skill.name }}</span>
         </div>
     </main>
     <aside>
         <div class="asideTop">
             <div class="headlineSkills">
-                <span>My skills</span>
+                <h2>My skills</h2>
                 <div class="line"></div>
             </div>
             <p>I have gained experience in building projects with various
@@ -18,4 +19,7 @@
             <a href="">Get in touch</a>
         </button>
     </aside>
+
+    <img class="greenShadow" src="./../../../assets/img/forms/green-shadow-skills.png" alt="">
 </section>
+

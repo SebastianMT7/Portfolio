@@ -1,0 +1,64 @@
+@import './../../../styles.scss';
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    >.head {
+        @include dFlex($jc: null, $gap: 50px);
+    }
+}
+
+.linePurple {
+    width: 50px;
+    height: 4px;
+    background-color: $purple;
+    border-radius: 0 4px 4px 0;
+}
+
+.content {
+    @include dFlex($ai: null, $gap: 150px);
+    padding: 85px 100px 200px 100px;
+}
+
+aside {
+    @include dFlex($fd: column, $jc: null, $ai: null, $gap: 35px);
+
+    p {
+        font-size: 32px;
+        font-weight: 700;
+    }
+
+    div {
+        :nth-child(2) {
+            font-weight: 700;
+        }
+    }
+}
+
+main {
+    @include dFlex($fd: column, $gap: 32px);
+    input {
+        border: 1px solid $purple;
+        border-radius: 10px;
+        height: 50px;
+        background-color: $background;
+        color: white;
+        width: 500px;
+        padding: 0 25px;
+
+        &::placeholder {
+            color: white;
+        }
+
+        &:hover {
+            cursor: pointer;
+            border-color: $green;
+        }
+
+        &:disabled {
+            background-color: grey;
+            cursor: not-allowed;
+          }
+    }
+}

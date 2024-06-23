@@ -1,1 +1,38 @@
-<p>contact works!</p>
+<section>
+    <div class="head">
+        <div class="linePurple"></div>
+        <h2>Contact</h2>
+    </div>
+
+    <div class="content">
+        <aside>
+            <p>Got a problem to solve?</p>
+            <span>
+                Contact me this form, I am interesed in hearing from your
+                ideas and contributin to your projects with my work.
+            </span>
+            <div>
+                <span>Need a Frontend developer? </span>
+                <span>Contact me!</span>
+            </div>
+        </aside>
+        <main>
+            <form>
+                <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="checkFields()"
+                    placeholder="Your name" required>
+                <input type="email" name="email" [(ngModel)]="email" (ngModelChange)="checkFields()"
+                    placeholder="Your email" required>
+                <input type="text" name="text" [(ngModel)]="text" (ngModelChange)="checkFields()"
+                    placeholder="Your message" required>
+                <span>I´ve read the <a href="">privacy politicy</a>
+                    and agree to the processing of my data as outlined
+                </span>
+                <button class="btnGrowing"  type="submit" [disabled]="!allFieldsFilled">
+                    Send message :)
+                </button>
+            </form>
+        </main>
+    </div>
+
+
+</section>

@@ -1,1 +1,35 @@
-<p>projects works!</p>
+<section>
+    <div class="head">
+        <div class="headline">
+            <div class="shortLine"></div>
+            <h2>Portfolio</h2>
+            <div class="bigLine"></div>
+        </div>
+        <span>Explore a selection of my work here - Interact with projects to see
+            my skills in action</span>
+    </div>
+
+    <main>
+        <div class="projectCard" *ngFor="let project of projectList; let i = index" [class.reverseRow]="i % 2 === 1">
+            <img src="{{ project.img }}" alt="">
+            <div>
+                <div class="description">
+                    <span>{{ project.name }}</span>
+                    <span>{{ project.skills }}</span>
+                    <span>{{ project.description }}</span>
+                </div>
+                <div class="buttons">
+                    <button class="liveTest">
+                        <a target="_blank" href="{{ project.liveTest }}">Live Test</a>
+                    </button>
+                    <button class="gitHub">
+                        <a target="_blank" href="{{ project.gitHub }}">Github</a>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- <img class="shadowPurple" src="./../../../assets/img/forms/purple shadow-projects.png" alt="">
+</section> -->

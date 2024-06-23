@@ -1,13 +1,12 @@
-
+@import './../../../styles.scss';
 
 section {
     display: flex;
+    position: relative;
     background-image: url(./../../../assets/img/forms/photo-shadows.png);
     background-repeat: no-repeat;
     background-position-x: -100px;
     background-position-y: 70px;
-    max-width: 1440px;
-    padding-right: 100px;
 }
 
 aside {
@@ -17,16 +16,12 @@ aside {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include dFlex($fd: column, $gap: 44px);
     padding-top: 50px;
-    gap: 44px;
     z-index: 10;
 
     :nth-child(1) {
-        display: flex;
-        align-items: center;
+        @include dFlex();
     }
 }
 
@@ -39,30 +34,27 @@ main {
 }
 
 .headline {
-    display: flex;
-    flex-direction: column;
+    @include dFlex($fd: column, $jc:null, $ai:flex-start);    
+    padding-right: 100px;
 
     :nth-child(1) {
-        font-size: 90px;
-        font-weight: 700;
         line-height: 108px;
     }
 
     :nth-child(2) {
         font-size: 58px;
         font-weight: 400;
-        color: rgba(151, 71, 255, 1);
+        color: $purple;
         line-height: 69.6px;
     }
 }
 
 .btnPos {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    @include dFlex($ai: flex-start);
 }
 
 .shape {
+    width: 100%;
     position: absolute;
     top: 380px;
     // left: 159.5px;
@@ -72,13 +64,12 @@ main {
 .line {
     width: 100px;
     height: 4px;
-    background-color: rgba(151, 71, 255, 1);
+    background-color: $purple;
     border-radius: 0 2px 2px 0;
 }
 
 .socials {
-    display: flex;
-    align-items: center;
+    @include dFlex($jc: null);
     z-index: 10;
     gap: 42px;
     padding-top: 50px;
@@ -95,23 +86,23 @@ main {
 }
 
 .scrollDown {
-    display: flex;
-    align-items: center;
+    @include dFlex($jc: null, $gap: 3px);
     position: absolute;
-    left: 1316px;
+    right: 100px;
     top: 773px;
     height: 160px;
     writing-mode: vertical-lr;
     line-height: 27.6px;
-    gap: 3;
 
-    img{
+    img {
         width: 24px;
     }
 }
 
-.shadowPurple{
+.shadowPurple {
     position: absolute;
-    top: 773px;
-    left: 1316px;
+    right: 0;
+    top: 700px;
+    height: 800px;
+    z-index: -1;
 }
