@@ -28,37 +28,57 @@ aside {
         font-size: 32px;
         font-weight: 700;
     }
+}
 
-    div {
-        :nth-child(2) {
-            font-weight: 700;
-        }
+
+form {
+    @include dFlex($fd: column, $gap: 32px);
+
+    a {
+        color: $purple;
+        text-decoration: underline;
     }
 }
 
-main {
-    @include dFlex($fd: column, $gap: 32px);
-    input {
-        border: 1px solid $purple;
-        border-radius: 10px;
-        height: 50px;
-        background-color: $background;
+input,
+textarea {
+    font-size: 16px;
+    border: 1px solid $purple;
+    border-radius: 10px;
+    height: 50px;
+    background-color: $background;
+    color: white;
+    width: 500px;
+    padding: 0 25px;
+
+    &::placeholder {
         color: white;
-        width: 500px;
-        padding: 0 25px;
-
-        &::placeholder {
-            color: white;
-        }
-
-        &:hover {
-            cursor: pointer;
-            border-color: $green;
-        }
-
-        &:disabled {
-            background-color: grey;
-            cursor: not-allowed;
-          }
+        font-size: 16px;
     }
+
+    &:hover {
+        cursor: pointer;
+        border-color: $green;
+    }
+
+    &:focus{
+        outline: none;
+        /* Entfernt den Standard-Fokusrahmen des Browsers */
+        background-color: inherit;
+        /* Beibehaltung des ursprünglichen Hintergrunds */ 
+    }
+}
+
+textarea {
+    text-wrap: wrap;
+    resize: vertical;
+    word-break: break-word;
+    font-size: 17px;
+    padding-top: 12px;
+}
+
+.custom-checkbox [type="checkbox"] {
+    width: 18px;
+    border: 2px solid $green;
+    background-color: transparent;
 }

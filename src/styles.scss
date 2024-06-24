@@ -52,5 +52,11 @@ a {
     cursor: pointer;
     background-color: $purple;
     transform: scaleY(1.2) scaleX(1.2);
-  }
+  }  
+
+  &:disabled{
+    background-color: grey;
+    cursor: not-allowed;
+    transform: scaleY(1.0) scaleX(1.0);
+}
 }
