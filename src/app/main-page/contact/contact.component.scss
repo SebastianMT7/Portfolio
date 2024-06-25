@@ -3,6 +3,7 @@
 section {
     display: flex;
     flex-direction: column;
+    padding-bottom: 90px;
 
     >.head {
         @include dFlex($jc: null, $gap: 50px);
@@ -18,7 +19,7 @@ section {
 
 .content {
     @include dFlex($ai: null, $gap: 150px);
-    padding: 85px 100px 200px 100px;
+    padding: 85px 100px 0 100px;
 }
 
 aside {
@@ -36,7 +37,10 @@ form {
 
     a {
         color: $purple;
-        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
 
@@ -61,15 +65,16 @@ textarea {
         border-color: $green;
     }
 
-    &:focus{
+    &:focus {
         outline: none;
         /* Entfernt den Standard-Fokusrahmen des Browsers */
         background-color: inherit;
-        /* Beibehaltung des ursprünglichen Hintergrunds */ 
+        /* Beibehaltung des ursprünglichen Hintergrunds */
     }
 }
 
 textarea {
+    min-height: 200px;
     text-wrap: wrap;
     resize: vertical;
     word-break: break-word;
@@ -77,8 +82,50 @@ textarea {
     padding-top: 12px;
 }
 
-.custom-checkbox [type="checkbox"] {
-    width: 18px;
+.checkDiv {
+    display: flex;
+    gap: 8px;
+    font-size: 14px;
+}
+
+input[type="checkbox"] {
+    height: 24px;
+    width: 24px;
     border: 2px solid $green;
+    border-radius: 0;
+    padding: 0;
     background-color: transparent;
+    /* Hintergrundfarbe der Checkbox */
+    appearance: none;
+    /* Entfernt das Standard-Checkbox-Design */
+    -webkit-appearance: none;
+    /* Für Webkit-Browser */
+    -moz-appearance: none;
+    /* Für Mozilla-Browser */
+
+    &:checked,
+    &::before {
+        content: '✓';
+        /* Häkchen bei Aktivierung */
+        color: $green;
+        font-weight: 700;
+        display: block;
+        text-align: center;
+        // line-height: 18px;
+    }
+}
+
+.goUpBtn {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 51px;
+}
+
+.btnImg {
+    height: 39px;
+    width: 39px;
+
+    &:hover {
+        fill: green;
+    }
 }
