@@ -84,48 +84,104 @@ textarea {
 
 .checkDiv {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 8px;
     font-size: 14px;
 }
 
-input[type="checkbox"] {
+.checkbox-container input[type="checkbox"] {
     height: 24px;
     width: 24px;
     border: 2px solid $green;
     border-radius: 0;
     padding: 0;
     background-color: transparent;
-    /* Hintergrundfarbe der Checkbox */
+    position: relative;
+    cursor: pointer;
     appearance: none;
-    /* Entfernt das Standard-Checkbox-Design */
     -webkit-appearance: none;
-    /* Für Webkit-Browser */
     -moz-appearance: none;
-    /* Für Mozilla-Browser */
 
-    &:checked,
-    &::before {
-        content: '✓';
-        /* Häkchen bei Aktivierung */
-        color: $green;
-        font-weight: 700;
-        display: block;
-        text-align: center;
-        // line-height: 18px;
-    }
 }
+
+/* Stil für das Label, das das Häkchen enthält */
+.checkbox-container input[type="checkbox"]::after {
+    content: '\2714';
+    width: 12px;
+    height: 12px;
+    border-width: 0 3px 3px 0;
+    display: none;
+}
+
+/* Wenn die Checkbox aktiviert ist, zeige das Häkchen an */
+.checkbox-container input[type="checkbox"]:checked::after {
+    display: block;
+}
+
+/* Anpassung der Labelgröße, damit das Häkchen korrekt positioniert wird */
+.checkbox-container label {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+// input[type="checkbox"] {
+//     height: 24px;
+//     width: 24px;
+//     border: 2px solid $green;
+//     border-radius: 0;
+//     padding: 0;
+//     content: "";
+//     position: relative;
+//     background-color: transparent;
+//     /* Hintergrundfarbe der Checkbox */
+//     appearance: none;
+//     /* Entfernt das Standard-Checkbox-Design */
+//     -webkit-appearance: none;
+//     /* Für Webkit-Browser */
+//     -moz-appearance: none;
+//     /* Für Mozilla-Browser */
+
+//     &:checked {
+//         content: '✓';
+//         /* Häkchen bei Aktivierung */
+//         color: $green;
+//         font-weight: 700;
+//         display: block;
+//         text-align: center;
+//         // line-height: 18px;
+//     }
+// }
+
 
 .goUpBtn {
     display: flex;
     justify-content: flex-end;
     padding-top: 51px;
-}
 
-.btnImg {
-    height: 39px;
-    width: 39px;
+    svg {
+        height: 39px;
+        width: 39px;
 
-    &:hover {
-        fill: green;
+        &:hover {
+            rect {
+                stroke: $green;
+            }
+
+            path {
+                fill: $green;
+            }
+        }
     }
 }
+
+// .btnImg {
+//     height: 39px;
+//     width: 39px;
+
+//     &:hover {
+//         fill: green;
+//     }
+// }

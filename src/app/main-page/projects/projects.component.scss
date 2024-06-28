@@ -9,16 +9,18 @@ section {
 .head {
     //@include dFlex($jc:null,$fd:column, $gap:36px);
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 36px;
+    align-items: center;
+    gap: 10px;
 }
 
 .headline {
     // @include dFlex($jc: null, $gap:36px);
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 36px;
+    width: 100%;
 }
 
 .shortLine {
@@ -30,18 +32,18 @@ section {
 
 .bigLine {
     background-color: $purple;
-    width: 309px;
+    width: 40%;
     height: 4px;
     border-radius: 4px 0 0 4px;
 }
 
 main {
     @include dFlex($fd: column);
-    padding: 0 100px;
 }
 
 .projectCard {
     @include dFlex($gap: 35px);
+    padding: 0 100px 0 172px;
 
     :nth-child(1) {
         @include dFlex($jc:null, $ai: null, $fd: column, $gap: 15px);
@@ -50,6 +52,7 @@ main {
 
 .reverseRow {
     flex-direction: row-reverse;
+    padding: 0 172px 0 100px;
 }
 
 .description {
