@@ -27,6 +27,14 @@ export class ProjectsComponent {
       gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
     },
 
+    // { name: "Simple CRM", 
+    //   img: "assets/img/elPolloLoco.png",
+    //   skills: "Angular | Firebase",
+    //   description: "Coming soon!",
+    //   liveTest:"https://sebastian-torney.developerakademie.net/El-Pollo-Loco/index.html",
+    //   gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
+    // },
+
     
   ]
 }

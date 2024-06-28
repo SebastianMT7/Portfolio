@@ -18,37 +18,39 @@
         <main>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <input #name="ngModel" type="text" minlength="4" id="name" name="name" [(ngModel)]="contactData.name"
-                    placeholder="Your name" (ngModelChange)="checkFields()" required>
-                @if (!name.valid && name.touched) {
-                <span>Please enter your full name</span>
+                    placeholder="Your name" [ngClass]="{'invalidInput': name.invalid && name.touched}" required>
+                @if (name.invalid && name.touched) {
+                <p>Please enter your full name</p>
+
                 }
-                <input #email="ngModel" type="email" minlength="4" id="email" name="email"
+                <input #email="ngModel" type="email" minlength="5" id="email" name="email"
                     pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
-                    (ngModelChange)="checkFields()" placeholder="Your email" required>
-                @if (!email.valid && email.touched) {
-                <span>Please enter your E-Mail</span>
+                    (ngModelChange)="checkFields()" [ngClass]="{'invalidInput': email.invalid && email.touched}"
+                    placeholder="Your email" required>
+                @if (email.invalid && email.touched) {
+                <p>Please enter a valid email address</p>
                 }
 
                 <textarea #message="ngModel" type="text" minlength="10" id="message" name="message"
                     [(ngModel)]="contactData.message" placeholder="Your message" (ngModelChange)="checkFields()"
-                    required></textarea>
-                @if (!message.valid && message.touched) {
-                <span>Please enter a message</span>
+                    required [ngClass]="{'invalidInput': message.invalid && message.touched}"></textarea>
+                @if (message.invalid && message.touched) {
+                <p>Please enter a message</p>
                 }
 
                 <div class="checkDiv">
                     <div>
-                    <div class="checkbox-container">
-                        <input #checkBox="ngModel" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
-                            name="checkbox" required>
-                        <label for="myCheckbox"></label>
+                        <div class="checkbox-container">
+                            <input #checkBox="ngModel" type="checkbox" id="myCheckbox"
+                                [(ngModel)]="contactData.checkbox" name="checkbox" required>
+                            <label for="myCheckbox"></label>
+                        </div>
+                        <span>I´ve read the <a href="">privacy politicy</a>
+                            and agree to the processing of my data as outlined
+                        </span>
                     </div>
-                    <span>I´ve read the <a href="">privacy politicy</a>
-                        and agree to the processing of my data as outlined
-                    </span>
-                </div>
                     @if (!checkBox.valid) {
-                    <span>Please accept the privacy politicy</span>
+                    <p>Please accept the privacy politicy</p>
                     }
                 </div>
                 <button class="btnGrowing" type="submit" [disabled]="!allFieldsFilled">
@@ -56,7 +58,7 @@
                 </button>
             </form>
             <div class="goUpBtn">
-                <a href="#header">
+                <a href="#above-the-fold">
                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
                         <path d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 

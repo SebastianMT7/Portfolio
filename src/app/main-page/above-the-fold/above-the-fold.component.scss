@@ -3,26 +3,33 @@
 section {
     display: flex;
     position: relative;
-    background-image: url(./../../../assets/img/forms/photo-shadows.png);
-    background-repeat: no-repeat;
-    background-position-x: -100px;
-    background-position-y: 70px;
+    scroll-margin-top: 150px;
+    gap: 20px;
+    // z-index: -5;
+}
+
+.photoShadow{
+    position: absolute;
+    top: 180px;
+    left: -100px;
+    z-index: -7;
 }
 
 aside {
     padding-left: 42px;
-    z-index: 5;
     max-width: 590px;
+    z-index: -6;
 }
 
 main {
     @include dFlex($fd: column, $gap: 44px);
-    padding-top: 50px;
-    z-index: 10;
+    z-index: 5;
 
     :nth-child(1) {
         @include dFlex();
     }
+
+    
 }
 
 .rotText {
@@ -30,11 +37,10 @@ main {
     transform: rotate(-180deg);
     font-size: 64px;
     font-weight: 400;
-    padding-left: 35px;
 }
 
 .headline {
-    @include dFlex($fd: column, $jc:null, $ai:flex-start);    
+    @include dFlex($fd: column, $jc: null, $ai: flex-start);
     padding-right: 100px;
 
     :nth-child(1) {
@@ -53,12 +59,17 @@ main {
     @include dFlex($ai: flex-start);
 }
 
+button {
+    z-index: 50;
+}
+
 .shape {
     width: 100%;
     position: absolute;
-    top: 380px;
+    top: 350px;
+    // top: 610px; für andere form!!
     // left: 159.5px;
-    z-index: -1;
+    z-index: -5;
 }
 
 .line {
@@ -70,7 +81,6 @@ main {
 
 .socials {
     @include dFlex($jc: null);
-    z-index: 10;
     gap: 42px;
     padding-top: 50px;
 
@@ -81,6 +91,12 @@ main {
             cursor: pointer;
             transition: transform 200ms ease-in-out;
             transform: scale(1.3);
+        }
+    }
+
+    .email{
+        &:hover{
+            color: $lightblue;
         }
     }
 }
@@ -94,6 +110,7 @@ main {
     writing-mode: vertical-lr;
     line-height: 27.6px;
     animation: moveUpDown 2s infinite;
+    z-index: 3;
 
     img {
         width: 24px;
@@ -105,17 +122,19 @@ main {
     right: 0;
     top: 700px;
     height: 800px;
-    z-index: -1;
+    z-index: -4;
 }
 
 @keyframes moveUpDown {
     0% {
         transform: translateY(0);
     }
+
     50% {
-        transform: translateY(-15px); 
+        transform: translateY(-15px);
     }
+
     100% {
-        transform: translateY(0); 
+        transform: translateY(0);
     }
 }

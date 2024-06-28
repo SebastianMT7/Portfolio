@@ -4,6 +4,7 @@ section {
     @include dFlex($ai: null, $jc: null, $gap:48px);
     padding-left: 100px;
     position: relative;
+    scroll-margin-top: 250px;
 }
 
 .skillList {

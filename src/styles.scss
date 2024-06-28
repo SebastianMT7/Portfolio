@@ -3,6 +3,7 @@ $fonts: #fff;
 $background: #141D2F;
 $green: rgba(112, 230, 28, 1);
 $purple: rgba(151, 71, 255, 1);
+$lightblue: rgba(28, 218, 230, 1);
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
   display: flex;
@@ -27,7 +28,7 @@ body {
 }
 
 
-h2{
+h2 {
   font-size: 90px;
   font-weight: 700;
 }
@@ -52,11 +53,11 @@ a {
     cursor: pointer;
     background-color: $purple;
     transform: scaleY(1.2) scaleX(1.2);
-  }  
+  }
 
-  &:disabled{
+  &:disabled {
     background-color: grey;
     cursor: not-allowed;
     transform: scaleY(1.0) scaleX(1.0);
-}
+  }
 }

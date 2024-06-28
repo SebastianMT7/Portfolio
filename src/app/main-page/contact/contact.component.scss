@@ -42,11 +42,15 @@ form {
             text-decoration: underline;
         }
     }
+
+    p {
+        color: red;
+    }
 }
 
 input,
 textarea {
-    font-size: 16px;
+    font: inherit;
     border: 1px solid $purple;
     border-radius: 10px;
     height: 50px;
@@ -57,7 +61,6 @@ textarea {
 
     &::placeholder {
         color: white;
-        font-size: 16px;
     }
 
     &:hover {
@@ -71,6 +74,14 @@ textarea {
         background-color: inherit;
         /* Beibehaltung des ursprünglichen Hintergrunds */
     }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+
+    &:valid {
+        border-color: $green;
+    }
 }
 
 textarea {
@@ -80,6 +91,10 @@ textarea {
     word-break: break-word;
     font-size: 17px;
     padding-top: 12px;
+}
+
+.invalidInput{
+    border: 1px solid red !important;
 }
 
 .checkDiv {
