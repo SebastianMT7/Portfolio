@@ -40,7 +40,7 @@ aside {
 }
 
 .headlineSkills {
-    @include dFlex($gap:42px, $jc:space-between);
+    @include dFlex($gap:42px, $jc:null);
 }
 
 .line {

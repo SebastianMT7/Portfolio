@@ -2,16 +2,20 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-imprint',
   standalone: true,
   imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  templateUrl: './imprint.component.html',
+  styleUrl: './imprint.component.scss'
 })
-export class FooterComponent {
+export class ImprintComponent {
   constructor(private router: Router) { }
 
   navigateTo(route: string) {
     this.router.navigate([route]);
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 }

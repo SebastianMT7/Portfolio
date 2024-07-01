@@ -2,16 +2,20 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-privacy',
   standalone: true,
   imports: [],
-  templateUrl: './footer.component.html',
-  styleUrl: './footer.component.scss'
+  templateUrl: './privacy.component.html',
+  styleUrl: './privacy.component.scss'
 })
-export class FooterComponent {
+export class PrivacyComponent {
   constructor(private router: Router) { }
 
   navigateTo(route: string) {
     this.router.navigate([route]);
+  }
+
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 }

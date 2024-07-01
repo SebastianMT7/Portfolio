@@ -1,0 +1,63 @@
+@import './../../../styles.scss';
+
+.background{
+    @include dFlex($fd: column, $gap: 32px);
+    background-color: $background;
+    padding: 64px 100px;
+    @media(max-width: 599px){
+        padding: 120px 16px;
+    }
+}
+
+section{
+    max-width: 1440px;
+    margin-inline: auto;
+    min-height: calc(100dvh - 200px);
+}
+
+.back{
+    margin-left: auto;
+}
+
+.backBtn {
+    transform: rotate(-90deg);
+    height: 39px;
+    width: 39px;
+    cursor: pointer;
+    &:hover {
+      rect {
+        stroke: $green;
+      }
+      path {
+        stroke: $green;
+        fill: $green;
+      }
+    }
+  }
+
+  a{    
+    color: $lightblue;
+
+    &:hover{
+        text-decoration: underline;
+    }
+  }
+
+  .posBtnBack{
+    @include dFlex($jc: null); 
+  }
+
+  h1{
+    font-size: 28px;
+    color: $purple;
+  }
+
+  h2{
+    font-size: 22px;
+    color: $purple;
+  }
+
+  h3{
+    font-size: 18px;
+    color: $green;
+  }

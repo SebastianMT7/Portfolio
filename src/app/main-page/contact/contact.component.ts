@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -11,6 +12,11 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent implements OnInit {
+  constructor(private router: Router) { }
+
+  navigateTo(route: string) {
+    this.router.navigate([route]);
+  }
 
   http = inject(HttpClient);
 
@@ -36,6 +42,8 @@ export class ContactComponent implements OnInit {
   checkFields() {
     this.allFieldsFilled = this.name.trim() !== '' && this.email.trim() !== '' && this.message.trim() !== '';
   }
+
+
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
