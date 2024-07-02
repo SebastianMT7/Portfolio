@@ -4,6 +4,7 @@ $background: #141D2F;
 $green: rgba(112, 230, 28, 1);
 $purple: rgba(151, 71, 255, 1);
 $lightblue: rgba(28, 218, 230, 1);
+$maxContent: 1920px;
 
 @mixin dFlex($jc: center, $ai: center, $fd: row, $gap: 0) {
   display: flex;
@@ -60,4 +61,17 @@ a {
     cursor: not-allowed;
     transform: scaleY(1.0) scaleX(1.0);
   }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient($purple, $green);
+  border-radius: 8px;
 }

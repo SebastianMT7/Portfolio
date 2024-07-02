@@ -1,6 +1,7 @@
 @import './../../../styles.scss';
 
 section {
+    max-width: $maxContent;
     @include dFlex($gap: 149px);
     z-index: 5;
 }

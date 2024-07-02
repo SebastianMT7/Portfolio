@@ -1,6 +1,12 @@
 @import './../../../styles.scss';
 
-section {
+.maxContent{
+    max-width: $maxContent;
+    position: relative;
+    margin:  auto;
+}
+
+#above-the-fold {
     display: flex;
     position: relative;
     scroll-margin-top: 150px;

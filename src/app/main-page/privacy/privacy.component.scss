@@ -1,63 +1,96 @@
 @import './../../../styles.scss';
 
-.background{
-    @include dFlex($fd: column, $gap: 32px);
-    background-color: $background;
-    padding: 64px 100px;
-    @media(max-width: 599px){
-        padding: 120px 16px;
-    }
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-section{
-    max-width: 1440px;
-    margin-inline: auto;
-    min-height: calc(100dvh - 200px);
+.background {
+  @include dFlex($fd: column, $gap: 32px);
+  background-color: $background;
+  padding: 64px 100px;
+
+  @media(max-width: 599px) {
+    padding: 120px 16px;
+  }
 }
 
-.back{
-    margin-left: auto;
+section {
+  margin-inline: auto;
+  min-height: calc(100dvh - 200px);
+  z-index: 10;
+}
+
+.back {
+  margin-left: auto;
 }
 
 .backBtn {
-    transform: rotate(-90deg);
-    height: 39px;
-    width: 39px;
-    cursor: pointer;
-    &:hover {
-      rect {
-        stroke: $green;
-      }
-      path {
-        stroke: $green;
-        fill: $green;
-      }
+  transform: rotate(-90deg);
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+
+  &:hover {
+    rect {
+      stroke: $green;
+    }
+
+    path {
+      stroke: $green;
+      fill: $green;
     }
   }
+}
 
-  a{    
-    color: $lightblue;
+a {
+  color: $lightblue;
 
-    &:hover{
-        text-decoration: underline;
-    }
+  &:hover {
+    text-decoration: underline;
   }
+}
 
-  .posBtnBack{
-    @include dFlex($jc: null); 
-  }
+.posBtnBack {
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 150px;
+}
 
-  h1{
-    font-size: 28px;
-    color: $purple;
-  }
+h1 {
+  font-size: 28px;
+  color: $purple;
+}
 
-  h2{
-    font-size: 22px;
-    color: $purple;
-  }
+h2 {
+  font-size: 22px;
+  color: $purple;
+}
 
-  h3{
-    font-size: 18px;
-    color: $green;
-  }
+h3 {
+  font-size: 18px;
+  color: $green;
+}
+
+.greenSide {
+  position: absolute;
+  top: 250px;
+  left: 0;
+}
+
+.purpleSide {
+  position: absolute;
+  top: 1200px;
+  right: 0;
+}
+
+.greenSideBottom {
+  position: absolute;
+  left: 0;
+  top: 210%;
+  transform: rotate(180deg);
+}

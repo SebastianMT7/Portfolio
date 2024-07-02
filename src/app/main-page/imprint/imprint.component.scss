@@ -1,63 +1,81 @@
 @import './../../../styles.scss';
 
-.background{
-    @include dFlex($fd: column, $gap: 32px);
-    background-color: $background;
-    padding: 64px 100px;
-    // @media(max-width: 599px){
-    //     padding: 120px 16px;
-    // }
+.background {
+  @include dFlex($fd: column, $gap: 32px);
+  background-color: $background;
+  padding: 64px 100px;
+  // @media(max-width: 599px){
+  //     padding: 120px 16px;
+  // }
 }
 
-section{
-    max-width: 1440px;
-    margin-inline: auto;
-    min-height: calc(100dvh - 200px);
+section {
+  max-width: 1440px;
+  margin-inline: auto;
+  min-height: calc(100dvh - 200px);
+  z-index: 10;
 }
 
-.back{
-    margin-left: auto;
+.back {
+  margin-left: auto;
 }
 
 .backBtn {
-    transform: rotate(-90deg);
-    height: 39px;
-    width: 39px;
-    cursor: pointer;
-    &:hover {
-      rect {
-        stroke: $green;
-      }
-      path {
-        stroke: $green;
-        fill: $green;
-      }
+  transform: rotate(-90deg);
+  height: 39px;
+  width: 39px;
+  cursor: pointer;
+
+  &:hover {
+    rect {
+      stroke: $green;
+    }
+
+    path {
+      stroke: $green;
+      fill: $green;
     }
   }
+}
 
-  .posBtnBack{
-    @include dFlex($jc: null); 
+.posBtnBack {
+  @include dFlex($jc: null);
+}
+
+a {
+  color: $lightblue;
+
+  &:hover {
+    text-decoration: underline;
   }
+}
 
-  a{    
-    color: $lightblue;
+h1 {
+  font-size: 28px;
+  color: $purple;
+}
 
-    &:hover{
-        text-decoration: underline;
-    }
-  }
+h2 {
+  font-size: 22px;
+  color: $purple;
+}
 
-  h1{
-    font-size: 28px;
-    color: $purple;
-  }
+h3 {
+  font-size: 18px;
+  color: $green;
+}
 
-  h2{
-    font-size: 22px;
-    color: $purple;
-  }
+.greenSide {
+  position: absolute;
+  top: 250px;
+  left: 0px;
+  // opacity: 50;
+}
 
-  h3{
-    font-size: 18px;
-    color: $green;
-  }
+.purpleSide {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  // transform: rotate(30deg);
+  opacity: 50;
+}
