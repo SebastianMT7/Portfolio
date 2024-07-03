@@ -10,7 +10,6 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    max-width: $maxContent;
 
     img {
         width: 150px;
@@ -24,6 +23,10 @@ header {
     a:hover {
         cursor: pointer;
         color: #70E61C;
+    }
 
+    img {
+        width: 50px; 
+        cursor: pointer;       
     }
 }

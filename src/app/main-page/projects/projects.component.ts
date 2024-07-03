@@ -33,8 +33,6 @@ export class ProjectsComponent {
     //   description: "Coming soon!",
     //   liveTest:"https://sebastian-torney.developerakademie.net/El-Pollo-Loco/index.html",
     //   gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
-    // },
-
-    
+    // },    
   ]
 }

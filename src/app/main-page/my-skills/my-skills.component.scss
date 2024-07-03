@@ -41,10 +41,14 @@ aside {
 
 .headlineSkills {
     @include dFlex($gap:42px, $jc:null);
+
+    h2{
+        width: 75%;
+    }
 }
 
 .line {
-    width: 58px;
+    width: 25%;
     height: 4px;
     background-color: $purple;
     border-radius: 2px 0 0 2px;

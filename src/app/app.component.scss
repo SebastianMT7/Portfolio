@@ -1,0 +1,16 @@
+@import './../styles.scss';
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.maxContent{
+    max-width: $maxContent;
+    width: 100%;
+    margin: 0 auto;
+}
