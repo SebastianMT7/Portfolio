@@ -20,16 +20,17 @@ export class ContactComponent implements OnInit {
 
   http = inject(HttpClient);
 
-  name: string = '';
-  email: string = '';
-  message: string = '';
+  // name: string = '';
+  // email: string = '';
+  // message: string = '';
+  // checked: boolean = false;
   allFieldsFilled: boolean = false;
 
   contactData = {
     name: "",
     email: "",
     message: "",
-    checkbox: "",
+    checkbox: false,
   }
 
   mailTest = true;
@@ -40,7 +41,16 @@ export class ContactComponent implements OnInit {
   }
 
   checkFields() {
-    this.allFieldsFilled = this.name.trim() !== '' && this.email.trim() !== '' && this.message.trim() !== '';
+    this.allFieldsFilled = this.contactData.name.trim() !== '' && this.contactData.email.trim() !== '' && this.contactData.message.trim() !== '' && this.contactData.checkbox !== false;
+  }
+
+  toggleChecked() {
+    if (this.contactData.checkbox = false) {
+      this.contactData.checkbox = true;
+    } else {
+      this.contactData.checkbox = false;
+    }
+    this.checkFields()
   }
 
 

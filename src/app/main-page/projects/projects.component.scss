@@ -4,6 +4,8 @@ section {
     // @include dFlex($fd:column);
     padding-top: 175px;
     position: relative;
+    max-width: $maxContent;
+    overflow: hidden;
 }
 
 .head {
@@ -105,7 +107,8 @@ main {
 
 .shadowPurple {
     position: absolute;
-    left: 0;
-    top: 650px;
+    right: -250px;
+    top: 600px;
     z-index: -1;
+    transform: rotate(30deg);
 }

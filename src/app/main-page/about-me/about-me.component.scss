@@ -3,6 +3,8 @@
 section {
     @include dFlex($gap: 149px);
     z-index: 5;
+    position: relative;
+    overflow: hidden;
 }
 
 main {

@@ -17,39 +17,56 @@
         </aside>
         <main>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-                <input #name="ngModel" type="text" minlength="4" id="name" name="name" [(ngModel)]="contactData.name"
-                    placeholder="Your name" [ngClass]="{'invalidInput': name.invalid && name.touched}" required>
-                @if (name.invalid && name.touched) {
-                <p>Please enter your full name</p>
-
-                }
-                <input #email="ngModel" type="email" minlength="5" id="email" name="email"
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
-                    (ngModelChange)="checkFields()" [ngClass]="{'invalidInput': email.invalid && email.touched}"
-                    placeholder="Your email" required>
-                @if (email.invalid && email.touched) {
-                <p>Please enter a valid email address</p>
-                }
-
-                <textarea #message="ngModel" type="text" minlength="10" id="message" name="message"
-                    [(ngModel)]="contactData.message" placeholder="Your message" (ngModelChange)="checkFields()"
-                    required [ngClass]="{'invalidInput': message.invalid && message.touched}"></textarea>
-                @if (message.invalid && message.touched) {
-                <p>Please enter a message</p>
-                }
-
+                <div>
+                    <input #name="ngModel" type="text" minlength="4" id="name" name="name"
+                        [(ngModel)]="contactData.name" placeholder="Your name"
+                        [ngClass]="{'invalidInput': name.invalid && name.touched}" required>
+                    @if (name.invalid && name.touched) {
+                    <p>Please enter your full name</p>
+                    <img class="signal" src="assets/img/wrong.png" alt="">
+                    }
+                    @if (name.valid && name.touched) {
+                    <img class="signal" src="assets/img/correct.png" alt="">
+                    }
+                </div>
+                <div>
+                    <input #email="ngModel" type="email" minlength="5" id="email" name="email"
+                        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
+                        (ngModelChange)="checkFields()" [ngClass]="{'invalidInput': email.invalid && email.touched}"
+                        placeholder="Your email" required>
+                    @if (email.invalid && email.touched) {
+                    <p>Please enter a valid email address</p>
+                    <img class="signal" src="assets/img/wrong.png" alt="">
+                    }
+                    @if (email.valid && email.touched) {
+                    <img class="signal" src="assets/img/correct.png" alt="">
+                    }
+                </div>
+                <div>
+                    <textarea #message="ngModel" type="text" minlength="10" id="message" name="message"
+                        [(ngModel)]="contactData.message" placeholder="Your message" (ngModelChange)="checkFields()"
+                        [ngClass]="{'invalidInput': message.invalid && message.touched}" required></textarea>
+                    @if (message.invalid && message.touched) {
+                    <p>Please enter a message</p>
+                    <img class="signal" src="assets/img/wrong.png" alt="">
+                    }
+                    @if (message.valid && message.touched) {
+                    <img class="signal" src="assets/img/correct.png" alt="">
+                    }
+                </div>
                 <div class="checkDiv">
                     <div>
                         <div class="checkbox-container">
-                            <input #checkBox="ngModel" type="checkbox" id="myCheckbox"
-                                [(ngModel)]="contactData.checkbox" name="checkbox" required>
-                            <label for="myCheckbox"></label>
+                            <input #checkBox="ngModel" type="checkbox" id="myCheckbox" 
+                                [(ngModel)]="contactData.checkbox" name="checkbox" (click)="toggleChecked()" required>
+                            <!-- <label for="myCheckbox"></label> -->
                         </div>
-                        <span>I´ve read the <a href="javascript:void(0)" (click)="navigateTo('/privacy')">privacy politicy</a>
+                        <span>I´ve read the <a href="javascript:void(0)" (click)="navigateTo('/privacy')">privacy
+                                politicy</a>
                             and agree to the processing of my data as outlined
                         </span>
                     </div>
-                    @if (!checkBox.valid) {
+                    @if (!checkBox.valid && message.valid && email.valid && name.valid) {
                     <p>Please accept the privacy politicy</p>
                     }
                 </div>
@@ -70,4 +87,5 @@
             </div>
         </main>
     </div>
+    <img class="shadowGreen" src="assets/img/forms/Green shadow contact.png" alt="">
 </section>
