@@ -42,5 +42,8 @@
     "pri-pol3": "gelesen und stimme zu",
     "accept": "Please accept the privacy policy.",
     "btn": "Nachricht senden"
+  },
+  "footer": {
+    "imprint": "Impressum"
   }
 }

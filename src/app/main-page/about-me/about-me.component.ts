@@ -9,12 +9,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './about-me.component.scss'
 })
 export class AboutMeComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
-
+  currentLanguage: string = 'en'; 
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
+  
   changeLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);

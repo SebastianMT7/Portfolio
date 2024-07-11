@@ -10,12 +10,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
-  
+  currentLanguage: string = 'en'; 
+
   constructor(private router: Router, private translate: TranslateService) { 
     this.translate.setDefaultLang(this.currentLanguage);
-
   }
+  
   changeLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);
