@@ -1,28 +1,26 @@
 <section id="contact">
     <div class="head">
         <div class="linePurple"></div>
-        <h2>Contact</h2>
+        <h2>{{'contact.big-headline' | translate}}</h2>
     </div>
 
     <div class="content">
         <aside>
-            <p>Got a problem to solve?</p>
-            <span>
-                Contact me this form, I am interesed in hearing from your
-                ideas and contributin to your projects with my work.
-            </span>
+            <p>{{'contact.headline' | translate}}</p>
+            <span>{{'contact.text1' | translate}}</span>
             <div>
-                <span>Need a Frontend developer? <b>Contact me!</b></span>
+                <span>{{'contact.text2' | translate}} <b>{{'contact.text3' | translate}}</b>
+                </span>
             </div>
         </aside>
         <main>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div>
                     <input #name="ngModel" type="text" minlength="4" id="name" name="name"
-                        [(ngModel)]="contactData.name" placeholder="Your name"
+                        [(ngModel)]="contactData.name" placeholder="{{'contact.ph-name' | translate}}"
                         [ngClass]="{'invalidInput': name.invalid && name.touched}" required>
                     @if (name.invalid && name.touched) {
-                    <p>Please enter your full name</p>
+                    <p>{{'contact.err-name' | translate}}</p>
                     <img class="signal" src="assets/img/wrong.png" alt="">
                     }
                     @if (name.valid && name.touched) {
@@ -32,10 +30,10 @@
                 <div>
                     <input #email="ngModel" type="email" minlength="5" id="email" name="email"
                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
-                        (ngModelChange)="checkFields()" [ngClass]="{'invalidInput': email.invalid && email.touched}"
-                        placeholder="Your email" required>
+                         [ngClass]="{'invalidInput': email.invalid && email.touched}"
+                        placeholder="{{'contact.ph-email' | translate}}" required>
                     @if (email.invalid && email.touched) {
-                    <p>Please enter a valid email address</p>
+                    <p>{{'contact.err-email' | translate}}</p>
                     <img class="signal" src="assets/img/wrong.png" alt="">
                     }
                     @if (email.valid && email.touched) {
@@ -44,10 +42,10 @@
                 </div>
                 <div>
                     <textarea #message="ngModel" type="text" minlength="10" id="message" name="message"
-                        [(ngModel)]="contactData.message" placeholder="Your message" (ngModelChange)="checkFields()"
+                        [(ngModel)]="contactData.message" placeholder="{{'contact.ph-msg' | translate}}" 
                         [ngClass]="{'invalidInput': message.invalid && message.touched}" required></textarea>
                     @if (message.invalid && message.touched) {
-                    <p>Please enter a message</p>
+                    <p>{{'contact.err-msg' | translate}}</p>
                     <img class="signal" src="assets/img/wrong.png" alt="">
                     }
                     @if (message.valid && message.touched) {
@@ -58,20 +56,21 @@
                     <div>
                         <div class="checkbox-container">
                             <input #checkBox="ngModel" type="checkbox" id="myCheckbox" 
-                                [(ngModel)]="contactData.checkbox" name="checkbox" (click)="toggleChecked()" required>
-                            <!-- <label for="myCheckbox"></label> -->
+                                [(ngModel)]="contactData.checkbox" name="checkbox" required>
+                            <label for="myCheckbox"></label>
                         </div>
-                        <span>I´ve read the <a href="javascript:void(0)" (click)="navigateTo('/privacy')">privacy
-                                politicy</a>
-                            and agree to the processing of my data as outlined
+                        <span>{{'contact.pri-pol1' | translate}} 
+                            <a href="javascript:void(0)" (click)="navigateTo('/privacy')">
+                                {{'contact.pri-pol2' | translate}}</a>
+                                {{'contact.pri-pol3' | translate}}
                         </span>
                     </div>
                     @if (!checkBox.valid && message.valid && email.valid && name.valid) {
-                    <p>Please accept the privacy politicy</p>
+                    <p>{{'contact.accept' | translate}}</p>
                     }
                 </div>
-                <button class="btnGrowing" type="submit" [disabled]="!allFieldsFilled">
-                    Send message :)
+                <button class="btnGrowing" type="submit" [disabled]="!contactForm.valid">
+                    {{'contact.btn' | translate}} :)
                 </button>
             </form>
             <div class="goUpBtn">

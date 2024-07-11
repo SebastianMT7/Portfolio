@@ -1,6 +1,46 @@
 {
-    "header": {
-        "about": "Über mich",
-        "skills": "Fähigkeiten"
-      }
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten"
+  },
+  "atf": {
+    "iam": "Ich bin",
+    "dev": "FRONTEND ENTWICKLER",
+    "btn": "Kontakt",
+    "scroll": "Runter scrollen"
+  },
+  "about": {
+    "headline": "Über mich",
+    "text1": "Hi, ich bin Sebastian Torney, ein Frontend Entwickler aus Bergwitz. Durch die Arbeit an zahlreichen Projekten habe ich mir die Fähigkeiten angeeignet, sowohl statische Webseiten als auch komplexe Business-Anwendungen zu programmieren.",
+    "text2": "Ich liebe es, mich mit neuen Technologien zu beschäftigen und diese zu lernen. Als Entwickler kann ich diese Leidenschaft nun in meinen beruflichen Alltag integrieren. ",
+    "text3": "Weiter unten finden Sie einen Überblick über meine Fähigkeiten und einige Projekte, in welchen ich diese umgesetzt habe. Es freut mich, dass Sie Ihren Weg auf meine Seite gefunden haben."
+  },
+  "skills": {
+    "headline": "Meine Fähigkeiten",
+    "text": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+    "btn": "Kontakt"
+  },
+  "projects": {
+    "text": "Erkunden Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "project1": "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.",
+    "project2": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+  },
+  "contact": {
+    "big-headline": "Kontakt",
+    "headline": "haben Sie ein Problem, das ich lösen kann?",
+    "text1": "Kontaktieren Sie mich über dieses Formular. Ich freue mich darauf, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen",
+    "text2": "Benötigen Sie einen Frontend Entwickler?",
+    "text3": "Kontaktieren Sie mich",
+    "ph-name": "Ihr Name",
+    "ph-email": "Ihre E-Mail",
+    "ph-msg": "Ihre Nachricht",
+    "err-name": "Bitte geben Sie ihren vollen Namen ein",
+    "err-email": "Bitte geben Sie eine gültige E-mail Adresse eins",
+    "err-msg": "Bitte schreiben Sie eine Nachricht mit mind. 10 Buchstaben",
+    "pri-pol1": "Ich habe die",
+    "pri-pol2": "Datenschutzerklärung",
+    "pri-pol3": "gelesen und stimme zu",
+    "accept": "Please accept the privacy policy.",
+    "btn": "Nachricht senden"
+  }
 }

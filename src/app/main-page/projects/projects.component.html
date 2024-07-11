@@ -5,8 +5,7 @@
             <h2>Portfolio</h2>
             <div class="bigLine"></div>
         </div>
-        <span>Explore a selection of my work here - Interact with projects to see
-            my skills in action</span>
+        <span>{{'projects.text' | translate}}</span>
     </div>
 
     <main>
@@ -16,7 +15,7 @@
                 <div class="description">
                     <span>{{ project.name }}</span>
                     <span>{{ project.skills }}</span>
-                    <span>{{ project.description }}</span>
+                    <span>{{ project.description | translate}}</span>
                 </div>
                 <div class="buttons">
                     <button class="liveTest">

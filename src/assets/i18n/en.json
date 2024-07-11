@@ -1,6 +1,47 @@
 {
-    "header": {
-        "about": "About",
-        "skills": "Skills"
-      }
+  "header": {
+    "about": "About",
+    "skills": "Skills"
+  },
+  "atf": {
+    "iam": "I am",
+    "dev": "FRONTEND DEVELOPER",
+    "btn": "Let´s talk",
+    "scroll": "scroll down"
+  },
+  "about": {
+    "headline": "About me",
+    "text1": "Hi, I'm Sebastian Torney, a Frontend Developer from Bergwitz. Through working on numerous projects, I have acquired the skills to program both static websites and complex business applications",
+    "text2": "I love engaging with new technologies and learning about them. As a developer, I can now integrate this passion into my daily professional life.t",
+    "text3": "Below, is an overview of my skills and some projects where I have applied them. I am pleased that you have found your way to my site."
+  },
+  "skills": {
+    "headline": "My skills",
+    "text": "I have gained experience in building projects with various front end technologies and concepts.",
+    "btn": "Get in touch"
+  },
+  "projects": {
+    "text": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+   "project1": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+   "project2": "A simple Jump-and-Run game based on a object-oriented approach. Help Pepe to find coins and bottles to fight against the killer chicken."
+  },
+  "contact": {
+    "big-headline": "Contact",
+    "headline": "Got a problem to solve?",
+    "text1": "Contact me through this form. I am looking forward to hearing from you, knowing your ideas, and contributing to your projects with my work.",
+    "text2": "Need a Frontend developer?",
+    "text3": "Contact me",
+    "ph-name": "Your name",
+    "ph-email": "Your email",
+    "ph-msg": "Your message",
+    "err-name": "Please enter your full name",
+    "err-email": "Please enter a valid email address",
+    "err-msg": "Please enter a message with at least 10 letters",
+    "pri-pol1": "I've read the",
+    "pri-pol2": "privacy policy",
+    "pri-pol3": "and agree to the processing of my data as outlined.",
+    "accept": "Please accept the privacy policy.",
+    "btn": "Send message :)"
+  }
+
 }

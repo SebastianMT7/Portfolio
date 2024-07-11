@@ -1,21 +1,32 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component,inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
-export class ContactComponent implements OnInit {
-  constructor(private router: Router) { }
+export class ContactComponent{
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+
+
+  constructor(private router: Router, private translate: TranslateService) { 
+    this.translate.setDefaultLang(this.currentLanguage);
+  }
 
   navigateTo(route: string) {
     this.router.navigate([route]);
+  }
+
+  changeLanguage(language: string) {
+    this.currentLanguage = language;
+    this.translate.use(language);
   }
 
   http = inject(HttpClient);
@@ -24,7 +35,7 @@ export class ContactComponent implements OnInit {
   // email: string = '';
   // message: string = '';
   // checked: boolean = false;
-  allFieldsFilled: boolean = false;
+  // allFieldsFilled: boolean = false;
 
   contactData = {
     name: "",
@@ -35,25 +46,14 @@ export class ContactComponent implements OnInit {
 
   mailTest = true;
 
+  isClicked: boolean = false; // Deklaration der isClicked-Variable
+  isBlurred: boolean = false; // Deklaration der isBlurred-Variable
+  isClickedSecondInput: boolean = false;
+  isBlurredSecondInput: boolean = false;
+  isClickedTextarea: boolean = false;
+  isBlurredTextarea: boolean = false;
 
-  ngOnInit() {
-    this.checkFields();
-  }
-
-  checkFields() {
-    this.allFieldsFilled = this.contactData.name.trim() !== '' && this.contactData.email.trim() !== '' && this.contactData.message.trim() !== '' && this.contactData.checkbox !== false;
-  }
-
-  toggleChecked() {
-    if (this.contactData.checkbox = false) {
-      this.contactData.checkbox = true;
-    } else {
-      this.contactData.checkbox = false;
-    }
-    this.checkFields()
-  }
-
-
+  isGerman: boolean = false;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -71,8 +71,19 @@ export class ContactComponent implements OnInit {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
+            this.contactData = {
+              name: '',
+              email: '',
+              message: '',
+              checkbox: false
+            };
+            this.isClicked = false;
+            this.isBlurred = false;
+            this.isClickedSecondInput = false;
+            this.isBlurredSecondInput = false;
+            this.isClickedTextarea = false;
+            this.isBlurredTextarea = false;
           },
           error: (error) => {
             console.error(error);
@@ -80,10 +91,35 @@ export class ContactComponent implements OnInit {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.contactData.email = '';
       ngForm.resetForm();
     }
   }
+
+  onInputChange() {
+    this.isClicked = true;
+  }
+
+  setInputBlurred() {
+    this.isBlurred = true;
+  }
+
+  onInputChanges() {
+    this.isClickedSecondInput = true;
+  }
+
+  setInputBlurredSecondInput() {
+    this.isBlurredSecondInput = true;
+  }
+
+  onTextareaInputChange() {
+    this.isClickedTextarea = true;
+  }
+
+  setInputBlurredTextarea() {
+    this.isBlurredTextarea = true;
+  }
+
 
 }
 

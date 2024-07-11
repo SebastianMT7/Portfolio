@@ -1,31 +1,28 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
-  standalone: true,    
+  standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  imports: [CommonModule,TranslateModule],
-  // imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslateModule],
 })
 
-export class HeaderComponent {
-  // isGerman: boolean = true;
+export class HeaderComponent implements OnInit {
+  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  ngOnInit(): void {
 
-  
-  // constructor(private translate: TranslateService) {}
+  }
 
-  
-  //   changeLanguage(lang: string) {
-  //     this.translate.use(lang);
-  //   }
-
-  
-
-  
-
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang(this.currentLanguage);
+  }
+  changeLanguage(language: string) {
+    this.currentLanguage = language;
+    this.translate.use(language);
+  }
 }
