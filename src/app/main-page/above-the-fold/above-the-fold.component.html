@@ -2,10 +2,16 @@
     <section id="above-the-fold">
         <aside>
             <img src="assets/img/hero-photo.png" alt="hero-photo">
+            <img class="photoShadow" src="assets/img/forms/photo-shadows.png" alt="">
         </aside>
         <main>
             <div>
-                <div class="rotText">{{'atf.iam' | translate}}</div>
+                <div class="rotText"             
+                [ngClass]="{
+                    'german': isGerman === true
+                }">                 
+                  {{'atf.iam' | translate}}
+                </div>
                 <div class="headline">
                     <h2>Sebastian Torney</h2>
                     <span>{{'atf.dev' | translate}}</span>
@@ -42,7 +48,7 @@
         <img src="assets/img/arrow-down-line.png" alt="arrow-down">
     </div>
 
-    <img class="photoShadow" src="assets/img/forms/photo-shadows.png" alt="">
+   
 
     <img class="shadowPurple" src="assets/img/forms/purple shadow-about-me.png" alt="top-shape">
 

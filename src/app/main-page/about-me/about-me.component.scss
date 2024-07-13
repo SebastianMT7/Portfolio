@@ -1,20 +1,21 @@
 @import './../../../styles.scss';
 
 section {
-    @include dFlex($gap: 149px);
+    @include dFlex($gap: 50px);
     z-index: 5;
     position: relative;
     overflow: hidden;
 }
 
 main {
-    @include dFlex($ai: null, $jc: null, $fd: column, $gap:35px);
+    @include dFlex($ai: null, $jc: null, $fd: column, $gap: 35px);
     padding: 138px 0 178px 100px;
 
 }
 
 .infos {
-    @include dFlex($ai: null, $jc: null, $fd: column, $gap:35px);
+    @include dFlex($ai: null, $jc: null, $fd: column, $gap: 35px);
+
 
     div {
         display: flex;
@@ -31,8 +32,47 @@ aside {
     @include dFlex($jc: null);
 }
 
-.greenLine{
+.greenLine {
     width: 267px;
     height: 4px;
     background-color: $green;
+}
+
+
+@media (max-width: 1355px) {
+    aside {
+        display: none;
+    }
+
+    main {
+        padding: 138px 100px 178px 100px;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 138px 50px 178px 50px;
+
+        h2 {
+            font-size: 60px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        padding: 100px 25px 130px 25px;
+
+        h2 {
+            font-size: 60px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    main {
+        h2 {
+            font-size: 40px;
+        }
+    }
 }

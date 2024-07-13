@@ -1,30 +1,36 @@
 @import './../../../styles.scss';
 
-.maxContent{
+.maxContent {
     max-width: $maxContent;
     position: relative;
-    margin:  auto;
+    margin: auto;
 }
 
 #above-the-fold {
     display: flex;
     position: relative;
     scroll-margin-top: 150px;
-    gap: 20px;
+    justify-content: space-evenly;
     // z-index: -5;
 }
 
-.photoShadow{
-    position: absolute;
-    top: 180px;
-    left: -100px;
-    z-index: -7;
+h2 {
+    @media (max-width: 1590px) {
+        font-size: 70px;
+    }
 }
 
 aside {
-    padding-left: 42px;
+    position: relative;
     max-width: 590px;
     z-index: -6;
+}
+
+.photoShadow {
+    position: absolute;
+    top: 100px;
+    left: -100px;
+    z-index: -7;
 }
 
 main {
@@ -34,8 +40,6 @@ main {
     :nth-child(1) {
         @include dFlex();
     }
-
-    
 }
 
 .rotText {
@@ -45,15 +49,19 @@ main {
     font-weight: 400;
 }
 
+.german {
+    font-size: 40px ;
+}
+
 .headline {
     @include dFlex($fd: column, $jc: null, $ai: flex-start);
     padding-right: 100px;
 
-    :nth-child(1) {
+    h2 {
         line-height: 108px;
     }
 
-    :nth-child(2) {
+    span {
         font-size: 58px;
         font-weight: 400;
         color: $purple;
@@ -87,7 +95,7 @@ button {
 
 .socials {
     @include dFlex($jc: null);
-    gap: 42px;
+    gap: 32px;
     padding-top: 50px;
 
     img {
@@ -100,8 +108,8 @@ button {
         }
     }
 
-    .email{
-        &:hover{
+    .email {
+        &:hover {
             color: $lightblue;
         }
     }
@@ -142,5 +150,94 @@ button {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+///////////////////////////////--RESPONSIVE--/////////////////////////////
+
+@media (max-width: 1625px) {
+    .rotText {
+        font-size: 50px;
+    }
+
+    .headline {
+        h2 {
+            font-size: 50px;
+            line-height: 70px;
+        }
+
+        span {
+            font-size: 40px;
+            line-height: 69.6px;
+        }
+    }
+
+    .german {
+        font-size: 30px ;
+    }
+}
+
+@media (max-width: 1220px) {
+    #above-the-fold {
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        justify-content: null;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 850px) {
+    .scrollDown {
+        display: none;
+    }
+
+    .headline {
+        padding: 0;
+    }
+}
+
+@media (max-width: 580px) {
+    .rotText {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .headline {
+        h2 {
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        span {
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+
+    .german {
+        font-size: 17px ;
+    }
+
+    .btnGrowing {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 580px) {
+    .socials :nth-child(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 535px) {
+    aside :nth-child(1){
+        width: 500px; 
+    }
+}
+
+@media (max-width: 400px) {
+    aside :nth-child(1){
+        width: 300px; 
     }
 }

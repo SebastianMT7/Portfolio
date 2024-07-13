@@ -1,8 +1,8 @@
 <header>
     <div>
         <a href="">
-            <img src="assets/img/logos/logo.png" alt="personal logo">
-        </a> 
+            <img class="logo" src="assets/img/logos/logo.png" alt="personal logo">
+        </a>
     </div>
     <div class="menu">
         <a href="#about-me">{{'header.about' | translate}}</a>
@@ -11,4 +11,32 @@
         <img (click)="changeLanguage('de')" src="/assets/img/german.png" alt="german">
         <img (click)="changeLanguage('en')" src="/assets/img/english.png" alt="english">
     </div>
+
+    <div class="burgerMenu" [class.d-none]="menuOpen" (click)="toggleMenu()">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 2H31" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M1 16H31" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <path d="M1 30H31" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+    </div>
+    <div class="close" [class.d-none]="!menuOpen" (click)="toggleMenu()">
+        <svg width="35" height="32" viewBox="0 0 35 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 5L27.6506 26.7612" stroke="white" stroke-width="2" stroke-linecap="round" />
+            <path d="M7 27L27.46 5.05939" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+    </div>
+
+    <div class="mobileOpen" (click)="toggleMenu()" [class.d-none]="!menuOpen">
+        <div class="overlay">
+            <a href="#about-me">{{'header.about' | translate}} </a>
+            <a href="#my-skills">{{'header.skills' | translate}}</a>
+            <a href="#portfolio">Portfolio</a>
+            <div>
+                <img (click)="changeLanguage('de')" src="/assets/img/german.png" alt="german">
+                <img (click)="changeLanguage('en')" src="/assets/img/english.png" alt="english">
+            </div>
+        </div>
+    </div>
+
+
 </header>
