@@ -15,7 +15,12 @@
                 <div class="description">
                     <span>{{ project.name }}</span>
                     <span>{{ project.skills }}</span>
-                    <span>{{ project.description | translate}}</span>
+                    @if(isGerman==true){
+                    <span>{{ project.descriptionGER}}</span>
+                    } @else{
+                    <span>{{ project.descriptionENG}}</span>
+                    }
+
                 </div>
                 <div class="buttons">
                     <button class="liveTest">
@@ -27,8 +32,8 @@
                 </div>
             </div>
         </div>
-       
+
     </main>
     <img class="shadowPurple" src="assets/img/forms/purple-shadow-footer-and-portfolio.png" alt="">
-    
+
 </section>

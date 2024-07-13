@@ -13,6 +13,7 @@ section {
     font-size: 16px;
     font-weight: 700;
     gap: 54px;
+    // width: 50%;
 
     div {
         @include dFlex($fd: column, $gap:10px);
@@ -29,8 +30,12 @@ section {
 }
 
 aside {
-    @include dFlex($fd: column, $gap:57px);
-    min-width: 571px;
+    @include dFlex($fd: column,  $gap:57px);
+    min-width: 55%;
+
+    h2 {
+         white-space: nowrap;
+    }
 }
 
 .asideTop {

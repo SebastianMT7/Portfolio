@@ -16,14 +16,12 @@
     "text3": "Weiter unten finden Sie einen Überblick über meine Fähigkeiten und einige Projekte, in welchen ich diese umgesetzt habe. Es freut mich, dass Sie Ihren Weg auf meine Seite gefunden haben."
   },
   "skills": {
-    "headline": "Meine Fähigkeiten",
+    "headline": "Meine Skills",
     "text": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
     "btn": "Kontakt"
   },
   "projects": {
-    "text": "Erkunden Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-    "project1": "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.",
-    "project2": "Spring-, Lauf- und Wurfspiel basierend auf einem objektorientierten Ansatz. Hilf Pepe dabei, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen."
+    "text": "Erkunden Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
   },
   "contact": {
     "big-headline": "Kontakt",
@@ -40,8 +38,8 @@
     "pri-pol1": "Ich habe die",
     "pri-pol2": "Datenschutzerklärung",
     "pri-pol3": "gelesen und stimme zu",
-    "accept": "Please accept the privacy policy.",
-    "btn": "Nachricht senden"
+    "accept": "Bitte stimmen Sie der Datenschutzerklärung zu.",
+    "btn": "Nachricht senden :)"
   },
   "footer": {
     "imprint": "Impressum"
