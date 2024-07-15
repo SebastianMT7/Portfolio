@@ -34,9 +34,10 @@ section {
 
 .bigLine {
     background-color: $purple;
-    width: 40%;
+    width: 50%;
     height: 4px;
     border-radius: 4px 0 0 4px;
+    flex-grow: 1;
 }
 
 main {
@@ -48,7 +49,11 @@ main {
     padding: 0 100px 0 172px;
 
     :nth-child(1) {
-        @include dFlex($jc:null, $ai: null, $fd: column, $gap: 15px);
+        @include dFlex($jc: null, $ai: null, $fd: column, $gap: 15px);
+    }
+
+    img {
+        height: 500px;
     }
 }
 
@@ -111,4 +116,73 @@ main {
     top: 600px;
     z-index: -1;
     transform: rotate(30deg);
+}
+
+
+@media (max-width: 1185px) {
+    section {
+        // @include dFlex($fd:column);
+        padding: 175px 0;
+    }
+
+    .projectCard {
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        width: 500px;
+
+        :nth-child(1) {
+            @include dFlex($jc: center, $ai: center, $fd: column, $gap: 15px);
+
+        }
+    }
+
+    .buttons {
+        gap: 0;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 700px) {
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .headline {
+        // @include dFlex($jc: null, $gap:36px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 36px;
+        width: 80%;
+    }
+
+    .projectCard {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 490px) {
+
+    h2 {
+        font-size: 60px;
+    }
+
+    .headline {
+        // @include dFlex($jc: null, $gap:36px);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 36px;
+        width: 80%;
+    }
+
+    .projectCard {
+        padding: 0 50px;
+
+        img {
+            height: 300px;
+        }
+    }
 }

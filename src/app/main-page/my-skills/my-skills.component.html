@@ -1,4 +1,9 @@
 <section id="my-skills">
+    <div>
+        <button class="btnGrowing mobileBtn">
+            <a href="#contact">{{'skills.btn' | translate}}</a>
+        </button>
+    </div>
     <main class="skillList">
         <div *ngFor="let skill of skillList">
             <img src="{{ skill.img }}" alt="">
@@ -13,11 +18,12 @@
             </div>
             <p>{{'skills.text' | translate}}</p>
         </div>
-        <button class="btnGrowing">
+        <button class="btnGrowing desktopBtn">
             <a href="#contact">{{'skills.btn' | translate}}</a>
         </button>
     </aside>
 
+
+
     <img class="greenShadow" src="assets/img/forms/green-shadow-skills.png" alt="">
 </section>
-
