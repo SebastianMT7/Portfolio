@@ -7,6 +7,14 @@
   // @media(max-width: 599px){
   //     padding: 120px 16px;
   // }
+
+  @media (max-width: 900px) {   
+      padding: 64px 50px;    
+  }
+  
+  @media (max-width: 450px) {    
+      padding: 64px 25px;  
+  }
 }
 
 section {
@@ -39,7 +47,10 @@ section {
 }
 
 .posBtnBack {
-  @include dFlex($jc: null);
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 150px;
 }
 
 a {
@@ -79,3 +90,4 @@ h3 {
   // transform: rotate(30deg);
   opacity: 50;
 }
+
