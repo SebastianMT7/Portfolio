@@ -169,6 +169,10 @@ main {
         gap: 0;
         justify-content: space-evenly;
     }
+
+    .shadowPurple {
+        top: 1000px;
+    }
 }
 
 @media (max-width: 700px) {
@@ -187,7 +191,7 @@ main {
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 500px) {
 
     .head {
         h2 {
@@ -200,7 +204,7 @@ main {
     }
 
     .headline {
-        gap: 24px;
+        gap: 16px;
     }
     .shortLiDiv {
         width: 20%;
@@ -229,6 +233,11 @@ main {
         img {
             height: 300px;
         }
+    }
+
+    .shadowPurple {
+        width: 500px;
+        top: 900px;
     }
 }
 

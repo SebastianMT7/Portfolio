@@ -1,22 +1,27 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component,inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+  styleUrl: './contact.component.scss',
+  animations:[
+    fadeInOnEnterAnimation(),
+    fadeOutOnLeaveAnimation()
+  ]
 })
-export class ContactComponent{
+export class ContactComponent {
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
 
-  constructor(private router: Router, private translate: TranslateService) { 
+  constructor(private router: Router, private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
 
@@ -31,12 +36,6 @@ export class ContactComponent{
 
   http = inject(HttpClient);
 
-  // name: string = '';
-  // email: string = '';
-  // message: string = '';
-  // checked: boolean = false;
-  // allFieldsFilled: boolean = false;
-
   contactData = {
     name: "",
     email: "",
@@ -44,6 +43,7 @@ export class ContactComponent{
     checkbox: false,
   }
 
+  showPopup = true;
   mailTest = true;
 
   isClicked: boolean = false; // Deklaration der isClicked-Variable
@@ -54,6 +54,11 @@ export class ContactComponent{
   isBlurredTextarea: boolean = false;
 
   isGerman: boolean = false;
+
+
+  sendMail() {
+    this.showPopup = !this.showPopup;
+  }
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',

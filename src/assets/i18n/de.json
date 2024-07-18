@@ -39,8 +39,11 @@
     "pri-pol2": "Datenschutzerklärung",
     "pri-pol3": "gelesen und stimme zu",
     "accept": "Bitte stimmen Sie der Datenschutzerklärung zu.",
-    "btn": "Nachricht senden :)"
+    "btn": "Nachricht senden :)",
+    "mail-send1": "Danke für Ihre Ihre Nachricht.",
+    "mail-send2": "Ich werde mich in kürze bei Ihnen melden."
   },
+
   "footer": {
     "imprint": "Impressum"
   }

@@ -34,33 +34,38 @@ section {
 
 aside {
     @include dFlex($fd: column, $gap: 57px);
-    min-width: 55%;
-
-    h2 {
-        white-space: nowrap;
-    }
+    min-width: 40%;
 }
 
 .asideTop {
-    @include dFlex($fd: column, $jc: null, $ai: flex-start, $gap: 34px);
+    @include dFlex($jc: null, $ai: flex-start, $gap: 34px);
 }
 
 .headlineSkills {
-    @include dFlex($gap: 42px, $jc: flex-end);
+    @include dFlex($fd: column, $gap: 42px, $ai: flex-end);
     width: 100%;
+    text-align: end;
 
     h2 {
-
         white-space: nowrap;
     }
 }
 
-.line {
-    width: 25%;
-    height: 4px;
-    background-color: $purple;
-    border-radius: 2px 0 0 2px;
+.lineDiv {
+    display: flex;
+    align-items: center;
+    height: 136px;
 }
+
+.line {
+    background-color: $purple;
+    border: unset;
+    height: 4px;
+    border-radius: 4px;
+    flex-grow: 1;
+    width: 58px;
+}
+
 
 .greenShadow {
     position: absolute;
@@ -89,7 +94,6 @@ aside {
 
     aside {
         @include dFlex($fd: row, $gap: 57px);
-        // align-items: flex-end;
         justify-content: flex-end;
         width: 100%;
 
@@ -97,22 +101,6 @@ aside {
             width: auto;
             white-space: nowrap;
         }
-    }
-
-    .asideTop {
-        // justify-content: flex-end;
-        // align-items: flex-end;
-        // gap: 34px;
-        // width: 100%;
-
-        p {
-            // padding-right: 100px;
-        }
-    }
-
-    .headlineSkills {
-        // @include dFlex($gap: 42px, $jc: null);
-        // width:100%;
     }
 
     .desktopBtn {
@@ -130,7 +118,7 @@ aside {
     }
 
     .asideTop {
-        padding: 0 50px;
+        padding-left: 50px;
 
         .skillList {
             display: flex;
@@ -143,12 +131,24 @@ aside {
             }
         }
     }
+
+    .lineDiv {
+        display: flex;
+        align-items: center;
+        height: 90px;
+    }
 }
 
 @media (max-width: 500px) {
     .asideTop {
         padding-left: 25px;
+        gap: 16px;
+
     }
+    .line {
+        width: 20px;
+    }
+    
 }
 
 @media (max-width: 380px) {
@@ -165,5 +165,11 @@ aside {
         img {
             height: 40px;
         }
+    }
+
+    .lineDiv {
+        display: flex;
+        align-items: center;
+        height: 60px;
     }
 }

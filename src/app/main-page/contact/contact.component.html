@@ -30,7 +30,7 @@
                 <div>
                     <input #email="ngModel" type="email" minlength="5" id="email" name="email"
                         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
-                         [ngClass]="{'invalidInput': email.invalid && email.touched}"
+                        [ngClass]="{'invalidInput': email.invalid && email.touched}"
                         placeholder="{{'contact.ph-email' | translate}}" required>
                     @if (email.invalid && email.touched) {
                     <p>{{'contact.err-email' | translate}}</p>
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <textarea #message="ngModel" type="text" minlength="10" id="message" name="message"
-                        [(ngModel)]="contactData.message" placeholder="{{'contact.ph-msg' | translate}}" 
+                        [(ngModel)]="contactData.message" placeholder="{{'contact.ph-msg' | translate}}"
                         [ngClass]="{'invalidInput': message.invalid && message.touched}" required></textarea>
                     @if (message.invalid && message.touched) {
                     <p>{{'contact.err-msg' | translate}}</p>
@@ -53,24 +53,21 @@
                     }
                 </div>
                 <div class="checkDiv">
-                    <div>
-                        <div class="checkbox-container">
-                            <input #checkBox="ngModel" type="checkbox" id="myCheckbox" 
-                                [(ngModel)]="contactData.checkbox" name="checkbox" required>
-                            <label for="myCheckbox"></label>
-                        </div>
-                        <span>{{'contact.pri-pol1' | translate}} 
+                    <div class="checkbox-container">
+                        <input #checkBox="ngModel" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
+                            name="checkbox" required>
+                        <label for="myCheckbox"></label>
+                        <span>{{'contact.pri-pol1' | translate}}
                             <a href="javascript:void(0)" (click)="navigateTo('/privacy')">
                                 {{'contact.pri-pol2' | translate}}</a>
-                                {{'contact.pri-pol3' | translate}}
-                        </span>
+                            {{'contact.pri-pol3' | translate}}</span>
                     </div>
                     @if (!checkBox.valid && message.valid && email.valid && name.valid) {
                     <p>{{'contact.accept' | translate}}</p>
                     }
                 </div>
                 <button class="btnGrowing" type="submit" [disabled]="!contactForm.valid">
-                    {{'contact.btn' | translate}} 
+                    {{'contact.btn' | translate}}
                 </button>
             </form>
             <div class="goUpBtn">
@@ -86,5 +83,18 @@
             </div>
         </main>
     </div>
+    <!-- <div [ngStyle]="{'display': showMessage ? 'flex' : 'none'}" class="confirmMailDiv"> -->
+     <!-- <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">  -->
+
+        <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top"> 
+        <!-- <div class="confirmMailDiv"> -->
+        <div>
+            <span>{{ 'contact.mail-send1' | translate }}</span>
+            <span>{{ 'contact.mail-send2' | translate }}</span>
+        </div>
+    </div>
+
+    <button (click)="sendMail()">test</button>
+
     <img class="shadowGreen" src="assets/img/forms/Green shadow contact.png" alt="">
 </section>

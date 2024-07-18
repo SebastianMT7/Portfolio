@@ -39,7 +39,9 @@
     "pri-pol2": "privacy policy",
     "pri-pol3": "and agree to the processing of my data as outlined.",
     "accept": "Please accept the privacy policy.",
-    "btn": "Send message :)"
+    "btn": "Send message :)",
+    "mail-send1": "Thank you for your message.",
+    "mail-send2": "I will get in touch with you shortly."
   },
   "footer": {
     "imprint": "Imprint"
