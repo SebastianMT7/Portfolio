@@ -4,9 +4,11 @@
   @include dFlex($fd: column, $gap: 32px);
   background-color: $background;
   padding: 64px 100px;
+  z-index: 10;
   // @media(max-width: 599px){
   //     padding: 120px 16px;
   // }
+  position: relative;
 
   @media (max-width: 900px) {   
       padding: 64px 50px;    
@@ -20,9 +22,8 @@
 section {
   max-width: 1440px;
   margin-inline: auto;
-  min-height: calc(100dvh - 200px);
-  z-index: 10;
-}
+  min-height: calc(100dvh - 200px); 
+  }
 
 .back {
   margin-left: auto;
@@ -76,18 +77,21 @@ h3 {
   color: $green;
 }
 
-.greenSide {
+.purpleSide {
   position: absolute;
-  top: 250px;
+  bottom: 50px;
   left: 0px;
+  transform: rotate(180deg);
   // opacity: 50;
+  z-index: -1;
 }
 
-.purpleSide {
+.greenSide {
   position: absolute;
   top: 50px;
   right: 0px;
-  // transform: rotate(30deg);
+  transform: rotate(180deg);
   opacity: 50;
+  z-index: -1;
 }
 
