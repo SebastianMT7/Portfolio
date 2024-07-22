@@ -2,7 +2,7 @@
     <section>
         <div>
             <div class="posBtnBack">                
-                <a class="back" href="javascript:void(0)" (click)="navigateTo('/')">
+                <a href="javascript:void(0)" (click)="navigateTo('/')">
                     <svg class="backBtn" width="39" height="39" viewBox="0 0 39 39" fill="none"
                         xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
@@ -18,8 +18,8 @@
             </p>
             <p>Sebastian Torney <br>
                 Bahnhofstraße 101<br>
-                06901 Kemberg OT Berwitz<br>
-                <br>Deutschland
+                06901 Kemberg {{ 'privacy.district' | translate }} Berwitz<br>
+                <br>{{ 'privacy.country' | translate }}
                 <br>Tel.: 0049-15140773770
                 <br>E-Mail: <a href='mailto:STorney@web.de'>STorney&#64;web.de</a>
                 <br>
@@ -113,9 +113,10 @@
                         rel="noopener">{{ 'privacy.text37' | translate }}</a> (Version #2020-09-30).</em></p>
         </div>
     </section>
-</div>
-
     <img class="greenSide" src="assets/img/forms/green-shadow-skills.png" alt="">
     <img class="purpleSide" src="assets/img/forms/purple shadow-about-me.png" alt="">
+
+</div>
+
 
     <img class="greenSideBottom" src="assets/img/forms/green-shadow-projects.png" alt="">

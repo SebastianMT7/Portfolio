@@ -64,6 +64,8 @@
 
   "privacy": {
     "headline": "Datenschutzerklärung",
+    "country": "Deutschland",
+    "district": "Ortsteil",
     "text1": "Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutzgrundverordnung (DSGVO), ist:",
     "text3": "Ihre Betroffenenrechte",
     "text4": "Unter den angegebenen Kontaktdaten unseres Datenschutzbeauftragten können Sie jederzeit folgende Rechte ausüben:",

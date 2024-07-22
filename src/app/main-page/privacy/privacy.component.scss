@@ -1,25 +1,24 @@
 @import './../../../styles.scss';
 
-body {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
+// body {
+//   margin: 0;
+//   padding: 0;
+//   height: 100%;
+// }
 
 .background {
   @include dFlex($fd: column, $gap: 32px);
   background-color: $background;
-  padding: 64px 100px;
+  padding: 64px 100px;  
+  position: relative;
 
-  @media (max-width: 900px) {
-    padding: 64px 50px;
-  }
-
-  @media (max-width: 450px) {
+  @media (max-width: 950px) {
     padding: 64px 25px;
   }
+
+  // @media (max-width: 450px) {
+  //   padding: 64px 25px;
+  // }
 }
 
 section {
@@ -28,9 +27,9 @@ section {
   z-index: 10;
 }
 
-.back {
-  margin-left: auto;
-}
+// .back {
+//   margin-left: auto;
+// }
 
 .backBtn {
   transform: rotate(-90deg);
@@ -64,6 +63,10 @@ a {
   position: sticky;
   top: 150px;
 
+  a {
+    margin-left: auto;
+  }
+
   @media (max-width: 650px) {
     padding-right: 20px;
   }
@@ -96,9 +99,9 @@ h3 {
   right: 0;
 }
 
-.greenSideBottom {
-  position: absolute;
-  left: 0;
-  top: 210%;
-  transform: rotate(180deg);
-}
+// .greenSideBottom {
+//   position: absolute;
+//   left: 0;
+//   top: 210%;
+//   transform: rotate(180deg);
+// }
