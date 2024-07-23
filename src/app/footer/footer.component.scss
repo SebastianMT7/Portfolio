@@ -17,6 +17,10 @@ footer {
     display: flex;
     flex-direction: column;
 
+    img {
+        width: 250px;
+    }
+
     img:hover{
         cursor: pointer;
     }
