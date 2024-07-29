@@ -4,9 +4,10 @@
     max-width: $maxContent;
     position: relative;
     margin: auto;
+    scroll-margin-top: 250px;
 }
 
-#above-the-fold {
+.above-the-fold {
     display: flex;
     // position: relative;
     scroll-margin-top: 150px;

@@ -8,12 +8,13 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { TranslateConfigModule } from './translate-config.module';
 import { HttpClientModule } from '@angular/common/http';
+import * as AOS from 'aos';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, HeaderComponent,MainPageComponent, 
+  imports: [CommonModule, RouterOutlet, HeaderComponent, MainPageComponent,
     FooterComponent, TranslateModule, TranslateConfigModule, HttpClientModule],
 
   templateUrl: './app.component.html',
@@ -27,10 +28,26 @@ export class AppComponent {
     // Setzen der Standard-Sprache auf Englisch ('en')
     this.translate.setDefaultLang('en');
   }
-    changeLanguage(language: string) {
-      this.currentLanguage = language;
-      this.translate.use(language);
-    }
+
+  ngOnInit() {
+    this.AosInit();
+  }
+
+  
+
+  AosInit() {
+    AOS.init({
+      duration: 500,
+      delay: 400,
+      easing: 'ease-out',
+      once: true
+    });
+  }
+
+  changeLanguage(language: string) {
+    this.currentLanguage = language;
+    this.translate.use(language);
+  }
 }
 
 

@@ -27,7 +27,7 @@
     </div>
 
     <div class="mobileOpen" (click)="toggleMenu()" [class.d-none]="!menuOpen">
-        <div class="overlay">
+        <div class="overlay"  data-aos="fade-left">
             <a href="#about-me">{{'header.about' | translate}} </a>
             <a href="#my-skills">{{'header.skills' | translate}}</a>
             <a href="#portfolio">Portfolio</a>

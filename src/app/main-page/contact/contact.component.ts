@@ -12,7 +12,7 @@ import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animati
   imports: [CommonModule, FormsModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
-  animations:[
+  animations: [
     fadeInOnEnterAnimation(),
     fadeOutOnLeaveAnimation()
   ]
@@ -57,7 +57,10 @@ export class ContactComponent {
 
 
   sendMail() {
-    this.showPopup = !this.showPopup;
+    this.showPopup = false;
+    setTimeout(() => {
+      this.showPopup = true;
+    }, 2000);
   }
 
   post = {

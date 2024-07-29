@@ -1,4 +1,4 @@
-<section id="contact">
+<section id="contact" data-aos="fade-up">
     <div class="head">
         <div class="linePurple"></div>
         <h2>{{'contact.big-headline' | translate}}</h2>
@@ -71,7 +71,7 @@
                 </button>
             </form>
             <div class="goUpBtn">
-                <a href="#above-the-fold">
+                <a href="#atf">
                     <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="1" y="1" width="37" height="37" rx="18.5" stroke="white" stroke-width="2" />
                         <path d="M18 15.828L13.343 20.485C12.9526 20.8755 12.3195 20.8755 11.929 20.485C11.5386 20.0945 11.5386 
@@ -84,9 +84,10 @@
         </main>
     </div>
     <!-- <div [ngStyle]="{'display': showMessage ? 'flex' : 'none'}" class="confirmMailDiv"> -->
-     <!-- <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">  -->
+    <!-- <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">  -->
 
-        <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top"> 
+    <div [ngStyle]="{'display': showPopup ? 'none' : 'flex'}" 
+    [ngClass]="showPopup ? 'fade-right' : 'slide-top'" class="confirmMailDiv">
         <!-- <div class="confirmMailDiv"> -->
         <div>
             <span>{{ 'contact.mail-send1' | translate }}</span>
