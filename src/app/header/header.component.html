@@ -26,8 +26,9 @@
         </svg>
     </div>
 
-    <div class="mobileOpen" (click)="toggleMenu()" [class.d-none]="!menuOpen">
-        <div class="overlay"  data-aos="fade-left">
+    <div class="mobileNav" (click)="toggleMenu()" [class.d-none]="!menuOpen"
+    >
+        <div class="overlay">
             <a href="#about-me">{{'header.about' | translate}} </a>
             <a href="#my-skills">{{'header.skills' | translate}}</a>
             <a href="#portfolio">Portfolio</a>

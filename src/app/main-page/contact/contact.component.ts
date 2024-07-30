@@ -43,16 +43,16 @@ export class ContactComponent {
     checkbox: false,
   }
 
-  showPopup = true;
+  showPopup = false;
   mailTest = true;
 
   isGerman: boolean = false;
 
 
   sendMail() {
-    this.showPopup = false;
+    this.showPopup = true;
     setTimeout(() => {
-      this.showPopup = true;
+      this.showPopup = false;
     }, 5000);
   }
 
@@ -86,7 +86,9 @@ export class ContactComponent {
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.contactData.email = '';
+      this.showPopup = true;
       ngForm.resetForm();
+      console.log('send post complete')
       setTimeout((): void => {
         this.showPopup = false;
       }, 5000);

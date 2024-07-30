@@ -86,7 +86,7 @@
     <!-- <div [ngStyle]="{'display': showMessage ? 'flex' : 'none'}" class="confirmMailDiv"> -->
     <!-- <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">  -->
 
-    <div [ngStyle]="{'display': showPopup ? 'none' : 'flex'}" 
+    <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" 
     class="confirmMailDiv slide-top">
         <div>
             <span>{{ 'contact.mail-send1' | translate }}</span>
@@ -94,7 +94,7 @@
         </div>
     </div>
 
-    <button (click)="sendMail()">test</button>
+    <!-- <button (click)="sendMail()">test</button> -->
 
     <img class="shadowGreen" src="assets/img/forms/Green shadow contact.png" alt="">
 </section>

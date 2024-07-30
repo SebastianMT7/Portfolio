@@ -10,8 +10,8 @@ header {
     position: sticky;
     top: 0;
     z-index: 999;
-    
-   .logo {
+
+    .logo {
         width: 150px;
     }
 
@@ -70,14 +70,14 @@ a:hover {
     }
 }
 
-.mobileOpen {
-    position: absolute;
+.mobileNav {
+    position: fixed;
     top: 140px;
     left: 0;
     width: 100vw;
     max-width: $maxContent;
     height: 100vh;
-    opacity: 80%;
+    opacity: 80%;    
     // transform: translateX(100%);
     // transition: transform 300ms ease-in-out;
 
@@ -109,4 +109,13 @@ a:hover {
 
 .d-none {
     display: none;
+}
+
+.openSidebar {
+    transform: none;
+    
+}
+
+.closeSidebar {
+    transform: translateX(100%);
 }
