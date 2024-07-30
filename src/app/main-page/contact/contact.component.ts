@@ -46,13 +46,6 @@ export class ContactComponent {
   showPopup = true;
   mailTest = true;
 
-  isClicked: boolean = false; // Deklaration der isClicked-Variable
-  isBlurred: boolean = false; // Deklaration der isBlurred-Variable
-  isClickedSecondInput: boolean = false;
-  isBlurredSecondInput: boolean = false;
-  isClickedTextarea: boolean = false;
-  isBlurredTextarea: boolean = false;
-
   isGerman: boolean = false;
 
 
@@ -60,11 +53,11 @@ export class ContactComponent {
     this.showPopup = false;
     setTimeout(() => {
       this.showPopup = true;
-    }, 2000);
+    }, 5000);
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://sebastian-torney.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -79,19 +72,12 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.showPopup = true;
             ngForm.resetForm();
-            this.contactData = {
-              name: '',
-              email: '',
-              message: '',
-              checkbox: false
-            };
-            this.isClicked = false;
-            this.isBlurred = false;
-            this.isClickedSecondInput = false;
-            this.isBlurredSecondInput = false;
-            this.isClickedTextarea = false;
-            this.isBlurredTextarea = false;
+            setTimeout((): void => {
+              this.showPopup = false;
+            }, 5000);
+
           },
           error: (error) => {
             console.error(error);
@@ -101,34 +87,11 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.contactData.email = '';
       ngForm.resetForm();
+      setTimeout((): void => {
+        this.showPopup = false;
+      }, 5000);
     }
   }
-
-  onInputChange() {
-    this.isClicked = true;
-  }
-
-  setInputBlurred() {
-    this.isBlurred = true;
-  }
-
-  onInputChanges() {
-    this.isClickedSecondInput = true;
-  }
-
-  setInputBlurredSecondInput() {
-    this.isBlurredSecondInput = true;
-  }
-
-  onTextareaInputChange() {
-    this.isClickedTextarea = true;
-  }
-
-  setInputBlurredTextarea() {
-    this.isBlurredTextarea = true;
-  }
-
-
 }
 
 
