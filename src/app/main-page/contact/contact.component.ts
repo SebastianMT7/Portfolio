@@ -44,7 +44,7 @@ export class ContactComponent {
   }
 
   showPopup = false;
-  mailTest = true;
+  mailTest = false;
 
   isGerman: boolean = false;
 
