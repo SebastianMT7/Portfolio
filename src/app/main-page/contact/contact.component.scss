@@ -101,7 +101,7 @@ textarea {
 
     &:focus {
         outline: none;
-        background-color: inherit;
+        background-color: $background;
     }
 
     &:focus::placeholder {

@@ -1,4 +1,4 @@
-<section class="maxContent"  id="atf">
+<section class="maxContent" id="atf">
     <section class="above-the-fold">
         <aside>
             <img src="assets/img/hero-photo.png" alt="hero-photo">
@@ -6,11 +6,10 @@
         </aside>
         <main>
             <div>
-                <div class="rotText"             
-                [ngClass]="{
+                <div class="rotText" [ngClass]="{
                     'german': isGerman === true
-                }">                 
-                  {{'atf.iam' | translate}}
+                }">
+                    {{'atf.iam' | translate}}
                 </div>
                 <div class="headline">
                     <h2>Sebastian Torney</h2>
@@ -27,7 +26,7 @@
 
     <section class="socials">
         <div class="line"></div>
-        <a href="">
+        <a target="_blank" href="https://github.com/SebastianMT7">
             <img src="assets/img/logos/github.png" alt="github logo">
         </a>
         <a href="">
@@ -38,16 +37,30 @@
         </a>
         <a class="email" href='mailto:STorney@web.de'>STorney&#64;web.de</a>
     </section>
-    
+
     <img class="shapeDesktop" src="assets/img/forms/shapeDesktop.png" alt="top-shape">
-    <img class="shapeMobile" src="assets/img/forms/shapeMobile.png" alt="top-shape">
+    <div class="shapeMobile">
+        <svg  width="1440" height="879" viewBox="0 0 1440 879" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 166.1V878.5C398.203 843.5 1089.82 704.687 1438.01 545L1440 0C1152.8 240 0 166.1 0 166.1Z"
+                fill="url(#paint0_linear_541_3086)" />
+            <defs>
+                <linearGradient id="paint0_linear_541_3086" x1="674.456" y1="153" x2="708.608" y2="634.478"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#1A2743" />
+                    <stop offset="0.130208" stop-color="#1E283D" />
+                    <stop offset="0.489583" stop-color="#141D2F" />
+                </linearGradient>
+            </defs>
+        </svg>
+    </div>
+
 
     <div class="scrollDown">
         <span>{{'atf.scroll' | translate}}</span>
         <img src="assets/img/arrow-down-line.png" alt="arrow-down">
     </div>
 
-   
+
 
     <img class="shadowPurple" src="assets/img/forms/purple shadow-about-me.png" alt="top-shape">
 

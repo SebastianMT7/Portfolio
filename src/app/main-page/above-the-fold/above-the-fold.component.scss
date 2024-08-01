@@ -85,7 +85,7 @@ button {
     width: 100%;
     position: absolute;
     // top: calc(100dvh - 100px);
-    top: 125px;
+    top: 16%;
     // top: 610px; für andere form!!
     // left: 159.5px;
     z-index: -5;
@@ -100,21 +100,19 @@ button {
 
 .shapeMobile {
     display: none;
-    width: 100%;
+    width: 100vw;
     position: absolute;
-    top: 500px;
+    top: 45%;
     z-index: -5;
 
+    svg {
+        transform: scale(1, 1);
+    }
+
     @media (max-width: 1220px) {
-        display: block;
+        display: flex;
     }
 }
-
-// .shapeBg {
-//     z-index: 1;
-//     position: absolute;
-//     bottom: 0;
-// }
 
 .line {
     width: 100px;
@@ -127,6 +125,7 @@ button {
     @include dFlex($jc: null);
     gap: 32px;
     padding-top: 50px;
+    z-index: 1;
 
     img {
         width: 30px;
@@ -166,7 +165,7 @@ button {
     right: 0;
     top: 700px;
     height: 800px;
-    z-index: -4;
+    z-index: -1;
 }
 
 @keyframes moveUpDown {
@@ -228,20 +227,26 @@ button {
     }
 }
 
+// @media (max-width: 670px) {
+//     .shapeMobile {
+//         top: 600px;
+//     }
+// }
+
 @media (max-width: 580px) {
     .rotText {
-        font-size: 25px;
+        font-size: 27px;
         line-height: 30px;
     }
 
     .headline {
         h2 {
-            font-size: 25px;
+            font-size: 35px;
             line-height: 40px;
         }
 
         span {
-            font-size: 20px;
+            font-size: 30px;
             line-height: 35px;
         }
     }
@@ -265,10 +270,47 @@ button {
     aside :nth-child(1) {
         width: 500px;
     }
+
+    // .shapeMobile {
+    //     top: 500px;
+    // }
+}
+
+
+
+@media (max-width: 580px) {
+    .socials :nth-child(5) {
+        display: none;
+    }
 }
 
 @media (max-width: 400px) {
     aside :nth-child(1) {
         width: 300px;
     }
+
+    .rotText {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    .headline {
+        h2 {
+            font-size: 25px;
+            line-height: 40px;
+        }
+
+        span {
+            font-size: 20px;
+            line-height: 35px;
+        }
+    }
+
+    .german {
+        font-size: 17px;
+    }
+
+    // .shapeMobile {
+    //     top: 400px;
+    // }
 }
