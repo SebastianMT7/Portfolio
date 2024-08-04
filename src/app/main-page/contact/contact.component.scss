@@ -143,40 +143,121 @@ textarea {
     position: relative;
     padding-left: 10px;
     gap: 8px;
-
-    /* Stil für das Label, das kein Häkchen enthält */
-    input {
-        height: 24px;
-        width: 26px;
-        border: 2px solid $green;
-        border-radius: 0;
-        padding: 0;
-        background-color: transparent;
-        position: relative;
-        cursor: pointer;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-    }
 }
 
-/* Stil für das Label, das das Häkchen enthält */
-.checkbox-container input[type="checkbox"]::after {
-    content: '\2714';
-    width: 12px;
-    height: 12px;
-    border-width: 0 3px 3px 0;
-    display: none;
-    color: $green;
-    position: absolute;
-    left: 3px;
-}
+/* Stil für das Label, das kein Häkchen enthält */
+//     input {
+//         height: 24px;
+//         width: 24px;
+//         border: 2px solid $green;
+//         border-radius: 0;
+//         padding: 0;
+//         background-color: transparent;
+//         position: relative;
+//         cursor: pointer;
+//         appearance: none;
+//         -webkit-appearance: none;
+//         -moz-appearance: none;
+//     }
+// }
 
-/* Wenn die Checkbox aktiviert ist, zeige das Häkchen an */
-.checkbox-container input[type="checkbox"]:checked::after {
+// /* Stil für das Label, das das Häkchen enthält */
+// .checkbox-container input[type="checkbox"]::after {
+//     content: '\2714';
+//     width: 12px;
+//     height: 12px;
+//     border-width: 0 3px 3px 0;
+//     display: none;
+//     color: $green;
+//     position: absolute;
+//     left: 3px;
+// }
+
+// /* Wenn die Checkbox aktiviert ist, zeige das Häkchen an */
+// .checkbox-container input[type="checkbox"]:checked::after {
+//     display: block;
+//     text-align: center;
+//     line-height: 20px;
+// }
+
+/* Stil für das Label der benutzerdefinierten Checkbox */
+.custom-checkbox {
     display: block;
-    text-align: center;
-    line-height: 20px;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    // user-select: none;
+    background-color: transparent;
+}
+
+/* Verstecken des eigentlichen Checkbox-Eingabefeldes */
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    border: 2px solid $green;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Stil für das Checkmark-Symbol */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $background;
+    border: 2px solid $green;
+    box-sizing: border-box;
+}
+
+/* Häkchen in der Mitte des Checkmarks */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 7px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid $green;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+/* Anzeigen des Häkchens, wenn die Checkbox aktiviert ist */
+.custom-checkbox input:checked+.checkmark:after {
+    display: block;
+}
+
+/* Größe des Checkmarks proportional anpassen */
+.checkmark {
+    width: 25px;
+    height: 25px;
+}
+
+.custom-checkbox input:checked+.checkmark {
+    background-color: $background;
+}
+
+/* Responsive Anpassung: Checkmark bleibt quadratisch */
+@media (max-width: 600px) {
+    .checkmark {
+        width: 20px;
+        height: 20px;
+    }
+
+    .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 4px;
+        height: 8px;
+        border-width: 0 2px 2px 0;
+    }
 }
 
 .goUpBtn {
@@ -200,13 +281,14 @@ textarea {
     }
 }
 
-.confirmMailDiv{
+.confirmMailDiv {
     @include dFlex();
     position: absolute;
     left: calc(50vw - 150px);
     bottom: calc(50vh - 40px);
-    div{        
-        @include dFlex($fd:column, $gap:5px);
+
+    div {
+        @include dFlex($fd: column, $gap: 5px);
         background-color: $purple;
         border: solid 1px $purple;
         border-radius: 10px;
@@ -278,31 +360,32 @@ textarea {
  * animation slide-top
  * ----------------------------------------
  */
- @-webkit-keyframes slide-top {
+@-webkit-keyframes slide-top {
     0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
+
     100% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
     }
-  }
-
-
-  .slide-top {
-	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-  @keyframes slide-top {
+
+.slide-top {
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-top {
     0% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
+
     100% {
-      -webkit-transform: translateY(-100px);
-              transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
     }
-  }
-  
+}

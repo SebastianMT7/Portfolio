@@ -54,9 +54,14 @@
                 </div>
                 <div class="checkDiv">
                     <div class="checkbox-container">
-                        <input #checkBox="ngModel" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
+                        <!-- <input #checkBox="ngModel" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
                             name="checkbox" required>
-                        <label for="myCheckbox"></label>
+                        <label for="myCheckbox"></label> -->
+                        <label class="custom-checkbox">
+                            <input type="checkbox" #checkBox="ngModel" id="myCheckbox" [(ngModel)]="contactData.checkbox"
+                            name="checkbox" required>
+                            <span class="checkmark"></span>
+                          </label>
                         <span>{{'contact.pri-pol1' | translate}}
                             <a href="javascript:void(0)" (click)="navigateTo('/privacy')">
                                 {{'contact.pri-pol2' | translate}}</a>
