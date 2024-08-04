@@ -138,6 +138,7 @@ button {
 .socials {
     @include dFlex($jc: null, $gap: 32px);   
     z-index: 1;
+    padding-top: 50px;
 
     img {
         width: 30px;
@@ -226,7 +227,9 @@ button {
         justify-content: null;
         gap: 25px;
     }
-
+    .socials {
+        padding-top: 0;
+    }
 }
 
 @media (max-width: 850px) {

@@ -16,7 +16,7 @@
         <main>
             <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                 <div>
-                    <input #name="ngModel" type="text" minlength="4" id="name" name="name"
+                    <input #name="ngModel" type="text" minlength="5" id="name" name="name"
                         [(ngModel)]="contactData.name" placeholder="{{'contact.ph-name' | translate}}"
                         [ngClass]="{'invalidInput': name.invalid && name.touched}" required>
                     @if (name.invalid && name.touched) {
