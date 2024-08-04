@@ -54,14 +54,11 @@
                 </div>
                 <div class="checkDiv">
                     <div class="checkbox-container">
-                        <!-- <input #checkBox="ngModel" type="checkbox" id="myCheckbox" [(ngModel)]="contactData.checkbox"
-                            name="checkbox" required>
-                        <label for="myCheckbox"></label> -->
                         <label class="custom-checkbox">
-                            <input type="checkbox" #checkBox="ngModel" id="myCheckbox" [(ngModel)]="contactData.checkbox"
-                            name="checkbox" required>
+                            <input type="checkbox" #checkBox="ngModel" id="myCheckbox"
+                                [(ngModel)]="contactData.checkbox" name="checkbox" required>
                             <span class="checkmark"></span>
-                          </label>
+                        </label>
                         <span>{{'contact.pri-pol1' | translate}}
                             <a href="javascript:void(0)" (click)="navigateTo('/privacy')">
                                 {{'contact.pri-pol2' | translate}}</a>
@@ -91,8 +88,7 @@
     <!-- <div [ngStyle]="{'display': showMessage ? 'flex' : 'none'}" class="confirmMailDiv"> -->
     <!-- <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">  -->
 
-    <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" 
-    class="confirmMailDiv slide-top">
+    <div [ngStyle]="{'display': showPopup ? 'flex' : 'none'}" class="confirmMailDiv slide-top">
         <div>
             <span>{{ 'contact.mail-send1' | translate }}</span>
             <span>{{ 'contact.mail-send2' | translate }}</span>

@@ -9,10 +9,8 @@
 
 .above-the-fold {
     display: flex;
-    // position: relative;
     scroll-margin-top: 150px;
     justify-content: space-evenly;
-    // z-index: -5;
     overflow: hidden;
 }
 
@@ -75,6 +73,7 @@ main {
 
 .btnPos {
     @include dFlex($ai: flex-start);
+    padding-bottom: 50px;
 }
 
 button {
@@ -85,14 +84,8 @@ button {
 .shapeDesktop {
     width: 100%;
     position: absolute;
-    // top: calc(100dvh - 100px);
     top: 16%;
-    // top: 610px; für andere form!!
-    // left: 159.5px;
     z-index: -5;
-    // @media (min-width: 1720px) {
-    //     top: calc(20vh - 100px);
-    // }
 
     @media (max-width: 1220px) {
         display: none;
@@ -103,7 +96,6 @@ button {
     display: none;
     width: 100%;
     position: absolute;
-    // top: 45%;
     z-index: -5;
     bottom: 0;
 
@@ -115,10 +107,8 @@ button {
         background-color: $background;
     }
 
-
     svg {
         height: calc(100vw - 5%);
-        // transform: scale(1, 1);
     }
 
     @media (max-width: 1220px) {
@@ -146,9 +136,7 @@ button {
 }
 
 .socials {
-    @include dFlex($jc: null);
-    gap: 32px;
-    padding-top: 50px;
+    @include dFlex($jc: null, $gap: 32px);   
     z-index: 1;
 
     img {
@@ -340,8 +328,4 @@ button {
     .german {
         font-size: 17px;
     }
-
-    // .shapeMobile {
-    //     top: 400px;
-    // }
 }

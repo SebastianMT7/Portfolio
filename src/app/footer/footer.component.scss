@@ -1,9 +1,7 @@
 @import "../../styles.scss";
 
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include dFlex($jc: space-between);
     height: 290px;
     border-top: solid 4px #70E61C;
     padding: 121px 100px;
@@ -13,17 +11,17 @@ footer {
     }
 }
 
-.logo-imprint{
-    display: flex;
-    flex-direction: column;
-
-    img {
+.logo{
         width: 250px;
-    }
+   
 
-    img:hover{
+    :hover{
         cursor: pointer;
     }
+}
+
+.imprintDiv{
+    @include dFlex($fd: column);
 }
 
 .imprintDesktop:hover{
@@ -59,7 +57,7 @@ footer {
     footer {
         flex-direction: column;
         height: 380px;
-        padding: 70px 0;
+        padding: 30px 0;
     }
 
     .imprintDesktop{
