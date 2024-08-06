@@ -3,15 +3,15 @@
 .maxContent {
     max-width: $maxContent;
     position: relative;
-    margin: auto;
+    // margin: auto;
     scroll-margin-top: 250px;
 }
 
 .above-the-fold {
     display: flex;
-    scroll-margin-top: 150px;
+    scroll-margin-top: 50px;
     justify-content: space-evenly;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 h2 {
@@ -121,6 +121,7 @@ button {
 
     @media (max-width: 400px) {
         height: calc(100vw + 10%);
+
         div {
             height: 55%;
         }
@@ -136,7 +137,7 @@ button {
 }
 
 .socials {
-    @include dFlex($jc: null, $gap: 32px);   
+    @include dFlex($jc: null, $gap: 32px);
     z-index: 1;
     padding-top: 50px;
 
@@ -173,11 +174,32 @@ button {
     }
 }
 
+// .bgShape {
+//     position: relative;
+//     width: 100vw;
+// }
+
+// .shadowPurple {
+//     position: absolute;
+//     right: 0px;
+//     top: 70%;
+//     z-index: -1;
+
+//     @media (max-width:1220px) {
+//         transform: translateY(50%);
+//     }
+
+//     @media (max-width:770px) {
+//         top: 90%;
+//         width: 500px;
+//     }
+// }
+
 .shadowPurple {
     position: absolute;
-    right: 0;
+    right: 400px;
     top: 700px;
-    height: 800px;
+    // height: 800px;
     z-index: -1;
 }
 
@@ -227,6 +249,7 @@ button {
         justify-content: null;
         gap: 25px;
     }
+
     .socials {
         padding-top: 0;
     }
@@ -305,7 +328,7 @@ button {
         width: 300px;
     }
 
-    .photoShadow{
+    .photoShadow {
         width: 500px;
         top: 0px;
         left: -80px;

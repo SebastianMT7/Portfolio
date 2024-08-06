@@ -1,15 +1,22 @@
 @import "../../styles.scss";
 
+section {
+    background-color: $background;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-color: #141D2F;
+    z-index: 999;
+}
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 37px 100px;
     font-size: 24px;
-    background-color: #141D2F;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+    max-width: $maxContent;
+    margin-inline: auto;
 
     .logo {
         width: 150px;

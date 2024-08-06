@@ -4,7 +4,7 @@ section {
     @include dFlex($ai: null, $jc: null, $gap: 32px);
     padding-left: 0;
     position: relative;
-    scroll-margin-top: 250px;
+    scroll-margin-top: 200px;
 }
 
 .skillList {
@@ -69,9 +69,10 @@ aside {
 
 .greenShadow {
     position: absolute;
-    top: 50px;
-    left: 0;
+    top: 0px;
+    left: -250px;
     z-index: -1;
+    transform: rotateZ(0deg);
 }
 
 @media (min-width: 1415px) {

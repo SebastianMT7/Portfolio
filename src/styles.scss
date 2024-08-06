@@ -1,4 +1,3 @@
-// Main colors
 $fonts: #fff;
 $background: #141D2F;
 $green: rgba(112, 230, 28, 1);
@@ -23,11 +22,10 @@ $maxContent: 1920px;
 }
 
 body {
-  background-color: #141D2F;
+  background-color: $background;
   color: white;
   font-family: 'Poppins';
 }
-
 
 h2 {
   font-size: 90px;
@@ -64,7 +62,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {

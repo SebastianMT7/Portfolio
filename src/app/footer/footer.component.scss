@@ -1,38 +1,44 @@
 @import "../../styles.scss";
 
+section {
+    border-top: solid 4px #70E61C;
+    width: 100%;
+}
+
 footer {
     @include dFlex($jc: space-between);
     height: 290px;
-    border-top: solid 4px #70E61C;
     padding: 121px 100px;
+    max-width: $maxContent;
+    margin-inline: auto;
 
     span {
         font-size: 23px;
     }
 }
 
-.logo{
-        width: 250px;
-   
+.logo {
+    width: 250px;
 
-    :hover{
+
+    :hover {
         cursor: pointer;
     }
 }
 
-.imprintDiv{
+.imprintDiv {
     @include dFlex($fd: column);
 }
 
-.imprintDesktop:hover{
+.imprintDesktop:hover {
     cursor: pointer;
     color: $lightblue;
 }
 
-.imprintMobile{
+.imprintMobile {
     display: none;
 
-    &:hover{
+    &:hover {
         cursor: pointer;
         color: $lightblue;
     }
@@ -60,11 +66,11 @@ footer {
         padding: 30px 0;
     }
 
-    .imprintDesktop{
+    .imprintDesktop {
         display: none;
     }
 
-    .imprintMobile{
+    .imprintMobile {
         display: block;
     }
 }
