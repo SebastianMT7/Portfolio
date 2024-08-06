@@ -22,6 +22,7 @@
 }
 
 section {
+  max-width: $maxContent;
   margin-inline: auto;
   min-height: calc(100dvh - 200px);
   z-index: 10;

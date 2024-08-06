@@ -16,7 +16,7 @@
 }
 
 section {
-  max-width: 1440px;
+  max-width: $maxContent;
   margin-inline: auto;
   min-height: calc(100dvh - 200px);
 }
