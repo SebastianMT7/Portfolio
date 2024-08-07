@@ -1,46 +1,48 @@
-<div class="BgShape">
-<section class="maxContent" id="atf">
-    <section class="above-the-fold">
-        <aside>
-            <img class="heroImg" src="assets/img/hero-photo.png" alt="hero-photo">
-            <img class="photoShadow" src="assets/img/forms/photo-shadows.png" alt="">
-        </aside>
-        <main>
-            <div>
-                <div class="rotText" [ngClass]="{
+<div class="bgShape">
+    <section class="maxContent" id="atf">
+        <section class="above-the-fold">
+            <aside>
+                <img class="heroImg" src="assets/img/hero-photo.png" alt="hero-photo">
+                <div>
+                    <img src="assets/img/forms/photo-shadows.png" alt="">
+                </div>
+            </aside>
+            <main>
+                <div>
+                    <div class="rotText" [ngClass]="{
                     'german': isGerman === true
                 }">
-                    {{'atf.iam' | translate}}
+                        {{'atf.iam' | translate}}
+                    </div>
+                    <div class="headline">
+                        <h2>Sebastian Torney</h2>
+                        <span>{{'atf.dev' | translate}}</span>
+                    </div>
                 </div>
-                <div class="headline">
-                    <h2>Sebastian Torney</h2>
-                    <span>{{'atf.dev' | translate}}</span>
+                <div class="btnPos">
+                    <button class="btnGrowing">
+                        <a href="#contact">{{'atf.btn' | translate}}</a>
+                    </button>
                 </div>
-            </div>
-            <div class="btnPos">
-                <button class="btnGrowing">
-                    <a href="#contact">{{'atf.btn' | translate}}</a>
-                </button>
-            </div>
-        </main>
-    </section>
+            </main>
+        </section>
 
-    <nav class="socials">
-        <div class="line"></div>
-        <a target="_blank" href="https://github.com/SebastianMT7">
-            <img src="assets/img/logos/github.png" alt="github logo">
-        </a>
-        <a href="mailto: STorney@web.de">
-            <img src="assets/img/logos/email.png" alt="email logo">
-        </a>
-        <a href="">
-            <img src="assets/img/logos/linkedin.png" alt="linkedin logo">
-        </a>
-        <a class="email" href='mailto:info@sebastian-torney.de'>info&#64;sebastian-torney.de</a>
-    </nav>
+        <nav class="socials">
+            <div class="line"></div>
+            <a target="_blank" href="https://github.com/SebastianMT7">
+                <img src="assets/img/logos/github.png" alt="github logo">
+            </a>
+            <a href="mailto: STorney@web.de">
+                <img src="assets/img/logos/email.png" alt="email logo">
+            </a>
+            <a href="">
+                <img src="assets/img/logos/linkedin.png" alt="linkedin logo">
+            </a>
+            <a class="email" href='mailto:info@sebastian-torney.de'>info&#64;sebastian-torney.de</a>
+        </nav>
 
-    <img class="shapeDesktop" src="assets/img/forms/shapeDesktop.png" alt="top-shape">
-    <div class="shapeMobile">
+        <img class="shapeDesktop" src="assets/img/forms/shapeDesktop.png" alt="top-shape">
+        <!-- <div class="shapeMobile">
         <svg  width="1440" height="879" viewBox="0 0 1440 879" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 166.1V878.5C398.203 843.5 1089.82 704.687 1438.01 545L1440 0C1152.8 240 0 166.1 0 166.1Z"
                 fill="url(#paint0_linear_541_3086)" />
@@ -54,14 +56,14 @@
             </defs>
         </svg>
         <div></div>
-    </div>
+    </div> -->
 
 
-    <div class="scrollDown">
-        <span>{{'atf.scroll' | translate}}</span>
-        <img src="assets/img/arrow-down-line.png" alt="arrow-down">
-    </div>
-
-    <img class="shadowPurple" src="assets/img/forms/purple shadow-about-me.png" alt="top-shape">
-
-</section>
+        <div class="scrollDown">
+            <span>{{'atf.scroll' | translate}}</span>
+            <img src="assets/img/arrow-down-line.png" alt="arrow-down">
+        </div>
+        
+    </section>
+    <!-- <img class="shadowPurple" src="assets/img/forms/purple shadow-about-me.png" alt="top-shape"> -->
+</div>

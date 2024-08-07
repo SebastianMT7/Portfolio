@@ -1,28 +1,31 @@
-<section id="my-skills" data-aos="fade-right">
-    <div>
-        <button class="btnGrowing mobileBtn">
-            <a href="#contact">{{'skills.btn' | translate}}</a>
-        </button>
-    </div>
-    <main class="skillList">
-        <div *ngFor="let skill of skillList">
-            <img src="{{ skill.img }}" alt="">
-            <span>{{ skill.name }}</span>
+<div class="bgSection">
+    <section id="my-skills" data-aos="fade-right">
+        <div>
+            <button class="btnGrowing mobileBtn">
+                <a href="#contact">{{'skills.btn' | translate}}</a>
+            </button>
         </div>
-    </main>
-    <aside>
-        <div class="asideTop">
-            <div class="headlineSkills">
-                <h2>{{'skills.headline' | translate}}</h2>
-                <p>{{'skills.text' | translate}}</p>
+        <main class="skillList">
+            <div *ngFor="let skill of skillList">
+                <img src="{{ skill.img }}" alt="">
+                <span>{{ skill.name }}</span>
             </div>
-            <div class="lineDiv">
-                <hr class="line">
+        </main>
+        <aside>
+            <div class="asideTop">
+                <div class="headlineSkills">
+                    <h2>{{'skills.headline' | translate}}</h2>
+                    <p>{{'skills.text' | translate}}</p>
+                </div>
+                <div class="lineDiv">
+                    <hr class="line">
+                </div>
             </div>
-        </div>
-        <button class="btnGrowing desktopBtn">
-            <a href="#contact">{{'skills.btn' | translate}}</a>
-        </button>
-    </aside>
-    <img class="greenShadow" src="assets/img/forms/green-shadow-skills.png" alt="">
-</section>
+            <button class="btnGrowing desktopBtn">
+                <a href="#contact">{{'skills.btn' | translate}}</a>
+            </button>
+        </aside>
+    </section>
+    <!-- <img class="greenShadow" src="assets/img/forms/green-shadow-skills.png" alt=""> -->
+
+</div>

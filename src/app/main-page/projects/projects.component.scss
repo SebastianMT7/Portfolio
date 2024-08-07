@@ -1,11 +1,15 @@
 @import './../../../styles.scss';
 
+.bgSection{
+    position: relative;
+}
+
 section {
     // @include dFlex($fd:column);
     padding-top: 175px;
     position: relative;
     max-width: $maxContent;
-    // overflow: hidden;
+    overflow: hidden;
 }
 
 .head {
@@ -158,7 +162,7 @@ main {
     right: 0px;
     top: 600px;
     z-index: -1;
-    transform: rotate(30deg);
+    // transform: rotate(30deg);
 }
 
 

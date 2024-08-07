@@ -1,17 +1,31 @@
 @import './../../../styles.scss';
 
+.bgSection {
+    width: 100%;
+    position: relative;
+}
+
+.shadowPurple {
+    position: absolute;
+    right: 0;
+    top: -200px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+}
+
 section {
     @include dFlex($gap: 50px);
     z-index: 5;
-    position: relative;
-    overflow: hidden;
+    //position: relative;
+    // overflow: hidden;
     scroll-margin-top: 11050px;
 }
 
 main {
     @include dFlex($ai: null, $jc: null, $fd: column, $gap: 35px);
     padding: 138px 0 178px 100px;
-    
+
 }
 
 .infos {
@@ -46,6 +60,18 @@ aside {
 
     main {
         padding: 138px 100px 178px 100px;
+    }
+}
+
+@media (max-width: 1220px) {
+    .shadowPurple {
+        // height: 80%;
+        // width: calc(100% - 20px);
+        top: 50px;
+
+        // img {
+        //     // width: calc(100% - 20px);
+        // }
     }
 }
 

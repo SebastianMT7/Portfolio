@@ -1,12 +1,16 @@
 @import './../../../styles.scss';
 
+.bgSection{
+    position: relative;
+}
+
 section {
     position: relative;
     display: flex;
     flex-direction: column;
     padding-bottom: 90px;
     max-width: $maxContent;
-    // overflow: hidden;
+    overflow: hidden;
     scroll-margin-top: 850px;
 
     .head {

@@ -24,15 +24,19 @@ aside {
     display: flex;
     justify-content: center;
     position: relative;
-    max-width: 590px;
+    // max-width: 590px;
+    // max-width: 875px;
     z-index: -6;
-}
 
-.photoShadow {
-    position: absolute;
-    top: 100px;
-    left: -100px;
-    z-index: -7;
+    div {
+        width: 100%;
+        height: 100%;
+        z-index: -7;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
 }
 
 main {
@@ -174,17 +178,17 @@ button {
     }
 }
 
-// .bgShape {
-//     position: relative;
-//     width: 100vw;
-// }
+.bgShape {
+    position: relative;
+    width: 100%;
+}
 
-// .shadowPurple {
-//     position: absolute;
-//     right: 0px;
-//     top: 70%;
-//     z-index: -1;
-
+.shadowPurple {
+    position: absolute;
+    right: 50px;
+    top: -50px;
+    z-index: -1;
+}
 //     @media (max-width:1220px) {
 //         transform: translateY(50%);
 //     }
@@ -197,7 +201,7 @@ button {
 
 .shadowPurple {
     position: absolute;
-    right: 400px;
+    right: 0;
     top: 700px;
     // height: 800px;
     z-index: -1;
@@ -216,6 +220,8 @@ button {
         transform: translateY(0);
     }
 }
+
+
 
 ///////////////////////////////--RESPONSIVE--/////////////////////////////
 
@@ -253,6 +259,14 @@ button {
     .socials {
         padding-top: 0;
     }
+
+    .shadowPurple {
+        position: absolute;
+        right: 0;
+        top: 1100px;
+        // height: 800px;
+        z-index: -1;
+    }
 }
 
 @media (max-width: 850px) {
@@ -265,11 +279,16 @@ button {
     }
 }
 
-// @media (max-width: 670px) {
-//     .shapeMobile {
-//         top: 600px;
-//     }
-// }
+@media (max-width: 710px) {
+
+    // .shapeMobile {
+    //     top: 600px;
+    // }
+    .heroImg {
+        width: calc(100vw - 40px);
+        padding-left: calc((100vw - 500px) /2);
+    }
+}
 
 @media (max-width: 580px) {
     .rotText {
@@ -304,16 +323,11 @@ button {
     }
 }
 
-@media (max-width: 535px) {
-    .heroImg {
-        width: 500px;
-        padding-left: calc((100vw - 500px) /2);
-    }
-
-    // .shapeMobile {
-    //     top: 500px;
-    // }
-}
+// @media (max-width: 535px) {
+//     // .shapeMobile {
+//     //     top: 500px;
+//     // }
+// }
 
 
 
@@ -324,16 +338,6 @@ button {
 }
 
 @media (max-width: 400px) {
-    .heroImg {
-        width: 300px;
-    }
-
-    .photoShadow {
-        width: 500px;
-        top: 0px;
-        left: -80px;
-    }
-
     .rotText {
         font-size: 25px;
         line-height: 30px;

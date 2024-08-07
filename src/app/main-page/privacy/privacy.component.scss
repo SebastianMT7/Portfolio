@@ -1,11 +1,5 @@
 @import './../../../styles.scss';
 
-// body {
-//   margin: 0;
-//   padding: 0;
-//   height: 100%;
-// }
-
 .background {
   @include dFlex($fd: column, $gap: 32px);
   background-color: $background;
@@ -92,12 +86,20 @@ h3 {
   position: absolute;
   top: 250px;
   left: 0;
+
+  @media (max-width: 630px) {
+    width: calc(100% - 30px);
+  }
 }
 
 .purpleSide {
   position: absolute;
   top: 1200px;
   right: 0;
+
+  @media (max-width: 630px) {
+    width: calc(100% - 30px);
+  }
 }
 
 // .greenSideBottom {

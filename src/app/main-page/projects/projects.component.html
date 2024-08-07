@@ -1,39 +1,45 @@
-
-<section id="portfolio">
-    <div class="head" data-aos="fade-left">
-        <div class="headline">
-            <div class="shortLiDiv"><hr class="shortLine"></div>
-            <div class="h2Div"><h2>Portfolio</h2></div> 
-            <div class="longLiDiv"><hr class="bigLine"></div>
-        </div>
-        <span>{{'projects.text' | translate}}</span>
-    </div>
-
-    <main>
-        <div class="projectCard" *ngFor="let project of projectList; let i = index" [class.reverseRow]="i % 2 === 1"
-        [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'">
-            <img src="{{ project.img }}" alt="">
-            <div>
-                <div class="description">
-                    <span>{{ project.name }}</span>
-                    <span>{{ project.skills }}</span>
-                    @if(isGerman==true){
-                    <span>{{ project.descriptionGER}}</span>
-                    } @else{
-                    <span>{{ project.descriptionENG}}</span>
-                    }
+<div class="bgSection">
+    <section id="portfolio">
+        <div class="head" data-aos="fade-left">
+            <div class="headline">
+                <div class="shortLiDiv">
+                    <hr class="shortLine">
                 </div>
-                <div class="buttons">
-                    <button class="liveTest">
-                        <a target="_blank" href="{{ project.liveTest }}">Live Test</a>
-                    </button>
-                    <button class="gitHub">
-                        <a target="_blank" href="{{ project.gitHub }}">Github</a>
-                    </button>
+                <div class="h2Div">
+                    <h2>Portfolio</h2>
+                </div>
+                <div class="longLiDiv">
+                    <hr class="bigLine">
                 </div>
             </div>
+            <span>{{'projects.text' | translate}}</span>
         </div>
-    </main>
-    <img class="shadowPurple" src="assets/img/forms/purple-shadow-footer-and-portfolio.png" alt="">
 
-</section>
+        <main>
+            <div class="projectCard" *ngFor="let project of projectList; let i = index" [class.reverseRow]="i % 2 === 1"
+                [attr.data-aos]="i % 2 === 0 ? 'fade-right' : 'fade-left'">
+                <img src="{{ project.img }}" alt="">
+                <div>
+                    <div class="description">
+                        <span>{{ project.name }}</span>
+                        <span>{{ project.skills }}</span>
+                        @if(isGerman==true){
+                        <span>{{ project.descriptionGER}}</span>
+                        } @else{
+                        <span>{{ project.descriptionENG}}</span>
+                        }
+                    </div>
+                    <div class="buttons">
+                        <button class="liveTest">
+                            <a target="_blank" href="{{ project.liveTest }}">Live Test</a>
+                        </button>
+                        <button class="gitHub">
+                            <a target="_blank" href="{{ project.gitHub }}">Github</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!-- <img class="shadowPurple" src="assets/img/forms/purple-shadow-footer-and-portfolio.png" alt="">
+</div> -->
