@@ -2,13 +2,13 @@
 
 .bgSection{
     position: relative;
+    scroll-margin-top: 150px; 
 }
 
 section {
     @include dFlex($ai: null, $jc: null, $gap: 32px);
     padding-left: 0;
-    position: relative;
-    scroll-margin-top: 200px;
+    position: relative;   
     overflow: hidden;
 }
 
