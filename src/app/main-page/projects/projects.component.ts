@@ -34,7 +34,7 @@ export class ProjectsComponent {
       descriptionENG: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
       descriptionGER: "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.",
       liveTest:"https://join.sebastian-torney.de",
-      gitHub:"",
+      gitHub:"https://github.com/SebastianMT7/Join",
     },
 
     { name: "El-Pollo-Loco", 
