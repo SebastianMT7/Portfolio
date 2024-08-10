@@ -30,7 +30,7 @@
                     </div>
                     <div>
                         <input #email="ngModel" type="email" minlength="5" id="email" name="email"
-                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
+                            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" [(ngModel)]="contactData.email"
                             [ngClass]="{'invalidInput': email.invalid && email.touched}"
                             placeholder="{{'contact.ph-email' | translate}}" required>
                         @if (email.invalid && email.touched) {

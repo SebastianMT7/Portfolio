@@ -2,6 +2,8 @@
 
 .bgSection{
     position: relative;
+    max-width: $maxContent;
+    margin-inline: auto;
 }
 
 section {
