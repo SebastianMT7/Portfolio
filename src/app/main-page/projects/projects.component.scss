@@ -2,6 +2,7 @@
 
 .bgSection{
     position: relative;
+    scroll-margin-top: 50px
 }
 
 section {
@@ -9,7 +10,7 @@ section {
     padding-top: 175px;
     position: relative;
     max-width: $maxContent;
-    overflow: hidden;
+    overflow: hidden;    ;
 }
 
 .head {
@@ -204,6 +205,10 @@ main {
 @media (max-width: 700px) {
     h2 {
         font-size: 60px;
+    }
+
+    .bgSection{
+        scroll-margin-top: 0px
     }
 
     .head {
