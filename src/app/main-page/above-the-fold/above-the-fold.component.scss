@@ -110,15 +110,15 @@ button {
 
     .shapeMobile{
         width: 100vw;
-        height: 600px;
+        height: 450px;
         display: none;
 
         @media(max-width: 1220px) {
             display: block;
         }
 
-        @media(max-width: 495px) {
-            height: 500px;
+        @media(max-width: 580px) {
+            height: 350px;
         }
     }
 }
@@ -183,7 +183,12 @@ button {
         position: relative;
         align-items: center;
         justify-content: null;
-        gap: 25px;
+        // gap: 25px;
+        margin-top: 0;
+    }
+
+    main{
+        margin-top: -150px;
     }
 
     .socials {
