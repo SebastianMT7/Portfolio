@@ -103,7 +103,7 @@ button {
         width: 100vw;
         height: 320px;
 
-        @media(max-width: 1220px) {
+        @media(max-width: 1285px) {
             display: none;
         }
     }
@@ -113,7 +113,7 @@ button {
         height: 450px;
         display: none;
 
-        @media(max-width: 1220px) {
+        @media(max-width: 1285px) {
             display: block;
         }
 
@@ -155,7 +155,7 @@ button {
 
 ///////////////////////////////--RESPONSIVE--/////////////////////////////
 
-@media (max-width: 1625px) {
+@media (max-width: 1665px) {
     .rotText {
         font-size: 50px;
     }
@@ -177,7 +177,7 @@ button {
     }
 }
 
-@media (max-width: 1220px) {
+@media (max-width: 1285px) {
     .above-the-fold {
         flex-direction: column;
         position: relative;
