@@ -94,4 +94,8 @@ h3 {
   transform: rotate(180deg);
   opacity: 50;
   z-index: -1;
+
+  @media (max-width: 680px) {
+    top: 450px;
+  }
 }
