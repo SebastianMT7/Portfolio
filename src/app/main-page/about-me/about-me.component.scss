@@ -45,6 +45,10 @@ main {
 
 aside {
     @include dFlex($jc: null);
+
+    img {
+        width: 455px;
+    }
 }
 
 .greenLine {
