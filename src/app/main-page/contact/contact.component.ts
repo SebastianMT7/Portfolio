@@ -2,14 +2,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { PrivacyComponent } from '../privacy/privacy.component';
+
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslateModule],
+  imports: [CommonModule, FormsModule, TranslateModule, PrivacyComponent,RouterModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
   animations: [
@@ -21,13 +23,13 @@ export class ContactComponent {
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
 
 
-  constructor(private router: Router, private translate: TranslateService) {
+  constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
 
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
+  // navigateTo(route: string) {
+  //   this.router.navigate([route]);
+  // }
 
   changeLanguage(language: string) {
     this.currentLanguage = language;

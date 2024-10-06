@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { HeaderComponent } from '../../shared/header/header.component';
+import { FooterComponent } from '../../shared/footer/footer.component';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule, RouterModule,HeaderComponent,FooterComponent],
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss'
 })
@@ -19,10 +21,6 @@ export class PrivacyComponent {
   changeLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);
-  }
-
-  navigateTo(route: string) {
-    this.router.navigate([route]);
   }
 
   ngOnInit() {

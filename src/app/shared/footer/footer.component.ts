@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink, RouterModule } from '@angular/router';
 import { TranslateModule,TranslateService } from '@ngx-translate/core';
+import { ImprintComponent } from '../../main-page/imprint/imprint.component';
+
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule,RouterModule,ImprintComponent,RouterLink],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
   currentLanguage: string = 'en'; 
 
-  constructor(private router: Router, private translate: TranslateService) { 
+  constructor(private translate: TranslateService) { 
     this.translate.setDefaultLang(this.currentLanguage);
   }
 
@@ -21,7 +23,4 @@ export class FooterComponent {
     this.translate.use(language);
   }
 
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
 }
