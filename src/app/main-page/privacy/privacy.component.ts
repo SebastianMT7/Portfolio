@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy',
   standalone: true,
-  imports: [TranslateModule],
+  imports: [TranslateModule,RouterLink],
   templateUrl: './privacy.component.html',
   styleUrl: './privacy.component.scss'
 })

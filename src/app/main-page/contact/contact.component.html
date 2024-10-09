@@ -61,7 +61,7 @@
                                 <span class="checkmark"></span>
                             </label>
                             <span>{{'contact.pri-pol1' | translate}}
-                                <a href="javascript:void(0)" (click)="navigateTo('/privacy')">
+                                <a [routerLink]="['privacy']">
                                     {{'contact.pri-pol2' | translate}}</a>
                                 {{'contact.pri-pol3' | translate}}</span>
                         </div>

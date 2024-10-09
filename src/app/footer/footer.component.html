@@ -6,8 +6,10 @@
 
         <div class="imprintDiv">
             <span>© Sebastian Torney 2024</span>
-            <a class="imprintDesktop" href="javascript:void(0)" (click)="navigateTo('/imprint')">
-                {{'footer.imprint' | translate}}</a>
+            <!-- <a class="imprintDesktop" href="javascript:void(0)" (click)="navigateTo('/imprint')">
+                {{'footer.imprint' | translate}}</a> -->
+            <a class="imprintDesktop" [routerLink]="['imprint']">
+            {{'footer.imprint' | translate}}</a>
         </div>
         <div class="socials">
             <a target="_blank" href="https://github.com/SebastianMT7">
@@ -21,7 +23,7 @@
             </a>
         </div>
         <a class="imprintMobile" href="javascript:void(0)" (click)="navigateTo('/imprint')">
-    {{'footer.imprint' | translate}}</a>
+            {{'footer.imprint' | translate}}</a>
         <!-- <a class="imprintMobile" routerLink="/imprint">
             {{'footer.imprint' | translate}}</a> -->
     </footer>
