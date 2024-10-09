@@ -17,10 +17,6 @@ export class MySkillsComponent {
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
-  changeLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
 
   skillList = [
     { name: "Angular", img: "assets/img/logos/angular.png" },

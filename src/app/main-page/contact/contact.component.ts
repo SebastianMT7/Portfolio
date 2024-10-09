@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
 
@@ -19,22 +19,14 @@ import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animati
 })
 export class ContactComponent {
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
-
-
-  constructor(private router: Router, private translate: TranslateService) {
-    this.translate.setDefaultLang(this.currentLanguage);
-  }
-
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
-
-  changeLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
-
   http = inject(HttpClient);
+  showPopup = false;
+  mailTest = false;
+
+
+  constructor(private translate: TranslateService) {
+    this.translate.setDefaultLang(this.currentLanguage);
+  }  
 
   contactData = {
     name: "",
@@ -42,12 +34,6 @@ export class ContactComponent {
     message: "",
     checkbox: false,
   }
-
-  showPopup = false;
-  mailTest = false;
-
-  isGerman: boolean = false;
-
 
   sendMail() {
     this.showPopup = true;

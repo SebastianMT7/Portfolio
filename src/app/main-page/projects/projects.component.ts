@@ -11,8 +11,6 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ProjectsComponent {
   currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
- 
-
   isGerman: boolean = false;
 
   constructor(private translate: TranslateService) {
@@ -21,10 +19,6 @@ export class ProjectsComponent {
     this.translate.onLangChange.subscribe((event) => {
       this.isGerman = event.lang === 'de';
     });
-  }
-
-  changeLanguage(language: string) {
-    this.translate.use(language);
   }
 
   projectList = [

@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   menuOpen: boolean = false;
 
   ngOnInit(): void {
-
   }
 
   constructor(private translate: TranslateService) {

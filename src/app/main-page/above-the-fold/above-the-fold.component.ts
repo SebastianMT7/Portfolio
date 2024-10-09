@@ -21,10 +21,5 @@ export class AboveTheFoldComponent {
       this.isGerman = event.lang === 'de';
     });
   }
-
-  changeLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
-
+  
 }

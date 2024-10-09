@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { TranslateModule,TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -12,16 +12,8 @@ import { TranslateModule,TranslateService } from '@ngx-translate/core';
 export class FooterComponent {
   currentLanguage: string = 'en'; 
 
-  constructor(private router: Router, private translate: TranslateService) { 
+  constructor(private translate: TranslateService) { 
     this.translate.setDefaultLang(this.currentLanguage);
   }
 
-  changeLanguage(language: string) {
-    this.currentLanguage = language;
-    this.translate.use(language);
-  }
-
-  navigateTo(route: string) {
-    this.router.navigate([route]);
-  }
 }

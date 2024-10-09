@@ -1,13 +1,11 @@
 <section>
     <footer>
-        <a href="">
+        <a href="#atf">
             <img class="logo" src="assets/img/logos/logo.png" alt="personal logo">
         </a>
 
         <div class="imprintDiv">
             <span>© Sebastian Torney 2024</span>
-            <!-- <a class="imprintDesktop" href="javascript:void(0)" (click)="navigateTo('/imprint')">
-                {{'footer.imprint' | translate}}</a> -->
             <a class="imprintDesktop" [routerLink]="['imprint']">
             {{'footer.imprint' | translate}}</a>
         </div>
@@ -22,11 +20,7 @@
                 <img src="assets/img/logos/linkedin.png" alt="linkedin logo">
             </a>
         </div>
-        <a class="imprintMobile" href="javascript:void(0)" (click)="navigateTo('/imprint')">
+        <a class="imprintMobile" [routerLink]="['imprint']">
             {{'footer.imprint' | translate}}</a>
-        <!-- <a class="imprintMobile" routerLink="/imprint">
-            {{'footer.imprint' | translate}}</a> -->
     </footer>
 </section>
-<!-- <a class="imprintMobile" href="javascript:void(0)" (click)="navigateTo('/imprint')">
-    {{'footer.imprint' | translate}}</a> -->
