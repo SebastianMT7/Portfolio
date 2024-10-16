@@ -40,13 +40,14 @@ export class ProjectsComponent {
       gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
     },
 
-    // { name: "Simple CRM", 
-    //   img: "assets/img/elPolloLoco.png",
-    //   skills: "Angular | Firebase",
-    //   description: "Coming soon!",
-    //   liveTest:"https://sebastian-torney.developerakademie.net/El-Pollo-Loco/index.html",
-    //   gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
-    // },    
+    { name: "Pokedex", 
+      img: "assets/img/pokedex.png",
+      skills: "JavaScript | HTML | CSS | API",
+      descriptionENG: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+      descriptionGER: "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+      liveTest:"https://pokedex.sebastian-torney.de",
+      gitHub:"https://github.com/SebastianMT7/Pokedex",
+    },    
   ]
 
 
