@@ -13,7 +13,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 
 export class HeaderComponent implements OnInit {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'en'; 
   menuOpen: boolean = false;
 
   ngOnInit(): void {

@@ -11,7 +11,7 @@ import { TranslateModule,TranslateService } from '@ngx-translate/core';
   styleUrl: './my-skills.component.scss'
 })
 export class MySkillsComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'en';
 
 
   constructor(private translate: TranslateService) {
@@ -30,6 +30,5 @@ export class MySkillsComponent {
     { name: "Scrum", img: "assets/img/logos/scrum.png"},
     { name: "Material Design", img: "assets/img/logos/material-design.png"},
   ]
-
 
 }

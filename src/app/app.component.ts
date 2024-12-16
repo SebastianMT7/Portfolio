@@ -22,18 +22,15 @@ import * as AOS from 'aos';
 })
 export class AppComponent {
   title = 'Portfolio';
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'en';
 
   constructor(private translate: TranslateService) {
-    // Setzen der Standard-Sprache auf Englisch ('en')
     this.translate.setDefaultLang('en');
   }
 
   ngOnInit() {
     this.AosInit();
-  }
-
-  
+  }  
 
   AosInit() {
     AOS.init({

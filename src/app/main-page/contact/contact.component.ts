@@ -18,7 +18,7 @@ import { fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animati
   ]
 })
 export class ContactComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'en';
   http = inject(HttpClient);
   showPopup = false;
   mailTest = false;

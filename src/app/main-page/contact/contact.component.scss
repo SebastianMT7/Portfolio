@@ -93,7 +93,6 @@ textarea {
     background-color: $background;
     color: white;
     width: 100%;
-    // width: 617px;
     padding: 0 25px;
 
     &::placeholder {
@@ -151,52 +150,14 @@ textarea {
     gap: 8px;
 }
 
-/* Stil für das Label, das kein Häkchen enthält */
-//     input {
-//         height: 24px;
-//         width: 24px;
-//         border: 2px solid $green;
-//         border-radius: 0;
-//         padding: 0;
-//         background-color: transparent;
-//         position: relative;
-//         cursor: pointer;
-//         appearance: none;
-//         -webkit-appearance: none;
-//         -moz-appearance: none;
-//     }
-// }
-
-// /* Stil für das Label, das das Häkchen enthält */
-// .checkbox-container input[type="checkbox"]::after {
-//     content: '\2714';
-//     width: 12px;
-//     height: 12px;
-//     border-width: 0 3px 3px 0;
-//     display: none;
-//     color: $green;
-//     position: absolute;
-//     left: 3px;
-// }
-
-// /* Wenn die Checkbox aktiviert ist, zeige das Häkchen an */
-// .checkbox-container input[type="checkbox"]:checked::after {
-//     display: block;
-//     text-align: center;
-//     line-height: 20px;
-// }
-
-/* Stil für das Label der benutzerdefinierten Checkbox */
 .custom-checkbox {
     display: block;
     position: relative;
     padding-left: 35px;
     cursor: pointer;
-    // user-select: none;
     background-color: transparent;
 }
 
-/* Verstecken des eigentlichen Checkbox-Eingabefeldes */
 .custom-checkbox input {
     position: absolute;
     opacity: 0;
@@ -209,7 +170,6 @@ textarea {
     background-color: transparent;
 }
 
-/* Stil für das Checkmark-Symbol */
 .checkmark {
     position: absolute;
     top: 0;
@@ -221,7 +181,6 @@ textarea {
     box-sizing: border-box;
 }
 
-/* Häkchen in der Mitte des Checkmarks */
 .checkmark:after {
     content: "";
     position: absolute;
@@ -235,12 +194,10 @@ textarea {
     transform: rotate(45deg);
 }
 
-/* Anzeigen des Häkchens, wenn die Checkbox aktiviert ist */
 .custom-checkbox input:checked+.checkmark:after {
     display: block;
 }
 
-/* Größe des Checkmarks proportional anpassen */
 .checkmark {
     width: 25px;
     height: 25px;

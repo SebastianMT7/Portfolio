@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './projects.component.scss'
 })
 export class ProjectsComponent {
-  currentLanguage: string = 'en'; // Standardmäßig Englisch ausgewählt
+  currentLanguage: string = 'en';
   isGerman: boolean = false;
 
   constructor(private translate: TranslateService) {

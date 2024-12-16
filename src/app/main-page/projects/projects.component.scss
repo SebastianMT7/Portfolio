@@ -8,7 +8,6 @@
 }
 
 section {
-    // @include dFlex($fd:column);
     padding-top: 175px;
     position: relative;
     max-width: $maxContent;
@@ -16,7 +15,6 @@ section {
 }
 
 .head {
-    //@include dFlex($jc:null,$fd:column, $gap:36px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,7 +23,6 @@ section {
 }
 
 .headline {
-    // @include dFlex($jc: null, $gap:36px);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -138,40 +135,16 @@ main {
     }
 }
 
-// .bgShape {
-//     position: relative;
-//     width: 100vw;
-// }
-
-// .shadowPurple {
-//     position: absolute;
-//     right: 50px;
-//     top: 30%;
-//     z-index: -1;
-//     transform: rotate(30deg);
-
-//     @media (max-width:1220px) {
-//         transform: translateY(50%);
-//     }
-
-//     @media (max-width:770px) {
-//         top: 90%;
-//         width: 500px;
-//     }
-// }
-
 .shadowPurple {
     position: absolute;
     right: 0px;
     top: 600px;
     z-index: -1;
-    // transform: rotate(30deg);
 }
 
 
 @media (max-width: 1185px) {
     section {
-        // @include dFlex($fd:column);
         padding: 175px 0;
     }
 

@@ -19,8 +19,6 @@
 section {
     @include dFlex($gap: 50px);
     z-index: 5;
-    //position: relative;
-    // overflow: hidden;
 }
 
 main {
@@ -103,8 +101,6 @@ aside {
 
 @media (max-width: 1220px) {
     .shadowPurple {
-        // height: 80%;
-        // width: calc(100% - 20px);
         top: 50px;
     }
 }
@@ -124,10 +120,6 @@ aside {
             font-size: 60px;
         }
     }
-
-    // .bgSection {
-    //     overflow: hidden;
-    // }
 }
 
 @media (max-width: 500px) {
