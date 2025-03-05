@@ -22,13 +22,13 @@ export class ProjectsComponent {
   }
 
   projectList = [
-    { name: "Join", 
-      img: "assets/img/join.png",
-      skills: "Angular | TypeScript | HTML | CSS | Firebase",
-      descriptionENG: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
-      descriptionGER: "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.",
-      liveTest:"https://join.sebastian-torney.de",
-      gitHub:"https://github.com/SebastianMT7/Join",
+    { name: "DA Bubble", 
+      img: "assets/img/dabubble.png",
+      skills: "Angular | TypeScript | Firebase | HTML | SCSS",
+      descriptionENG: "A Messenger like Slack. Communicate with your team through channels or send private messages to other users. A global search feature makes it easy to find messages, users or channels. Share images or PDFs directly in the chat.",
+      descriptionGER: "Ein Chat-Messenger im Stile von Slack. Echtzeitkommunikation in Channels oder über Direktnachrichten. Eine globale Suchfunktion erleichtert das Finden von Nutzern und Nachrichten.",
+      liveTest:"https://dabubble.sebastian-torney.de",
+      gitHub:"https://github.com/SebastianMT7/DaBubble",
     },
 
     { name: "El-Pollo-Loco", 
@@ -40,14 +40,23 @@ export class ProjectsComponent {
       gitHub:"https://github.com/SebastianMT7/El-Pollo-Loco",
     },
 
-    { name: "Pokedex", 
-      img: "assets/img/pokedex.png",
-      skills: "JavaScript | HTML | CSS | API",
-      descriptionENG: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
-      descriptionGER: "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
-      liveTest:"https://pokedex.sebastian-torney.de",
-      gitHub:"https://github.com/SebastianMT7/Pokedex",
-    },    
+    { name: "Join", 
+      img: "assets/img/join.png",
+      skills: "Angular | TypeScript | HTML | CSS | Firebase",
+      descriptionENG: "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+      descriptionGER: "Aufgabenmanager basierend auf dem Kanban-System. Erstellen und organisieren Sie Aufgaben per Drag-and-Drop, und weisen Sie Benutzern und Kategorien zu.",
+      liveTest:"https://join.sebastian-torney.de",
+      gitHub:"https://github.com/SebastianMT7/Join",
+    },
+
+    // { name: "Pokedex", 
+    //   img: "assets/img/pokedex.png",
+    //   skills: "JavaScript | HTML | CSS | API",
+    //   descriptionENG: "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+    //   descriptionGER: "Basierend auf der PokéAPI, einer einfachen Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+    //   liveTest:"https://pokedex.sebastian-torney.de",
+    //   gitHub:"https://github.com/SebastianMT7/Pokedex",
+    // },    
   ]
 
 
