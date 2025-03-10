@@ -16,7 +16,15 @@ import { HttpLoaderFactory } from './translate.service';
   exports: [TranslateModule]
 })
 export class TranslateConfigModule {
+
+  /**
+   * Initializes the TranslateService for language translation.
+   * Sets the default language to English.
+   *
+   * @param translate - An instance of TranslateService used for handling translations.
+   */
   constructor(translate: TranslateService) {
     translate.setDefaultLang('en');
   }
+
 }

@@ -24,17 +24,29 @@ export class ContactComponent {
   mailTest = false;
 
 
+  /**
+   * Constructor for the component.
+   * Initializes the translation service and sets the default language.
+   *
+   * @param translate - An instance of TranslateService to manage language translations.
+   */
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
-  }  
+  }
 
+  /**
+   * Object storing contact form data, including name, email, message, and checkbox state.
+   */
   contactData = {
     name: "",
     email: "",
     message: "",
     checkbox: false,
-  }
+  };
 
+  /**
+   * Displays a popup notification for 5 seconds when an email is sent.
+   */
   sendMail() {
     this.showPopup = true;
     setTimeout(() => {
@@ -42,6 +54,10 @@ export class ContactComponent {
     }, 5000);
   }
 
+  /**
+   * Configuration object for sending an HTTP POST request.
+   * Contains the endpoint, request body formatter, and HTTP headers.
+   */
   post = {
     endPoint: 'https://sebastian-torney.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -53,6 +69,14 @@ export class ContactComponent {
     },
   };
 
+  /**
+   * Handles form submission.
+   * Sends the contact form data via an HTTP POST request if valid.
+   * Displays a confirmation popup upon success.
+   * Resets the form after submission.
+   *
+   * @param ngForm - The Angular form reference.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
@@ -63,7 +87,6 @@ export class ContactComponent {
             setTimeout((): void => {
               this.showPopup = false;
             }, 5000);
-
           },
           error: (error) => {
             console.error(error);
@@ -74,12 +97,13 @@ export class ContactComponent {
       this.contactData.email = '';
       this.showPopup = true;
       ngForm.resetForm();
-      console.log('send post complete')
+      console.log('send post complete');
       setTimeout((): void => {
         this.showPopup = false;
       }, 5000);
     }
   }
+
 }
 
 

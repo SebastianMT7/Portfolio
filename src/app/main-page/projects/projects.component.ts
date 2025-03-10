@@ -13,14 +13,26 @@ export class ProjectsComponent {
   currentLanguage: string = 'en';
   isGerman: boolean = false;
 
-  constructor(private translate: TranslateService) {
-    this.translate.setDefaultLang('en');
-    this.translate.use('en');
-    this.translate.onLangChange.subscribe((event) => {
-      this.isGerman = event.lang === 'de';
-    });
-  }
+/**
+ * Initializes the TranslateService for language translation.
+ * Sets the default language to English and listens for language changes.
+ * Updates the isGerman property based on the current language.
+ *
+ * @param translate - An instance of TranslateService used for handling translations.
+ */
+constructor(private translate: TranslateService) {
+  this.translate.setDefaultLang('en');
+  this.translate.use('en');
+  this.translate.onLangChange.subscribe((event) => {
+    this.isGerman = event.lang === 'de';
+  });
+}
 
+/**
+ * An array of project objects, each containing project details such as name, image, skills, descriptions in English and German,
+ * as well as links to live demos and GitHub repositories.
+ * Used to showcase personal or professional projects in a portfolio.
+ */
   projectList = [
     { name: "DA Bubble", 
       img: "assets/img/dabubble.png",

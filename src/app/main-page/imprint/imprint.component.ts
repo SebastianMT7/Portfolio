@@ -5,17 +5,26 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 @Component({
   selector: 'app-imprint',
   standalone: true,
-  imports: [TranslateModule,RouterLink],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './imprint.component.html',
   styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
-  currentLanguage: string = 'en'; 
+  currentLanguage: string = 'en';
 
-  constructor(private translate: TranslateService) { 
+  /**
+ * Constructor for the component.
+ * Initializes the translation service and sets the default language.
+ *
+ * @param translate - An instance of TranslateService to manage language translations.
+ */
+  constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
   }
 
+  /**
+   * scrolls to the top of the page when initialize the imprint Component
+   */
   ngOnInit() {
     window.scrollTo(0, 0);
   }

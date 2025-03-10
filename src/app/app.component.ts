@@ -28,10 +28,16 @@ export class AppComponent {
     this.translate.setDefaultLang('en');
   }
 
+  /**
+   * initialize the AosInit function when the site is load
+   */
   ngOnInit() {
     this.AosInit();
   }  
 
+  /**
+   * initialize the Animate on scroll library
+   */
   AosInit() {
     AOS.init({
       duration: 500,
@@ -41,6 +47,10 @@ export class AppComponent {
     });
   }
 
+  /**
+   * changes the language
+   * @param language the actual language
+   */
   changeLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);

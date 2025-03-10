@@ -13,7 +13,15 @@ export class AboveTheFoldComponent {
   currentLanguage: string = 'en';
   isGerman: boolean = false;
 
-
+/**
+ * Initializes the component with language translation settings.
+ * 
+ * - Sets the default language to the current language.
+ * - Applies the current language for translations.
+ * - Subscribes to language change events to update the `isGerman` flag dynamically.
+ *
+ * @param {TranslateService} translate - The Angular service used for managing translations.
+ */
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang(this.currentLanguage);
     this.translate.use(this.currentLanguage);

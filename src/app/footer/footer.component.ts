@@ -12,6 +12,12 @@ import { TranslateModule,TranslateService } from '@ngx-translate/core';
 export class FooterComponent {
   currentLanguage: string = 'en'; 
 
+    /**
+   * Constructor for the component.
+   * Initializes the translation service and sets the default language.
+   *
+   * @param translate - An instance of TranslateService to manage language translations.
+   */
   constructor(private translate: TranslateService) { 
     this.translate.setDefaultLang(this.currentLanguage);
   }
