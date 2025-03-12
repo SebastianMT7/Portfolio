@@ -1,7 +1,7 @@
 @import './../../../styles.scss';
 
-.bgSection{
-    position: relative; 
+.bgSection {
+    position: relative;
     max-width: $maxContent;
     margin-inline: auto;
 }
@@ -9,7 +9,7 @@
 section {
     @include dFlex($ai: null, $jc: null, $gap: 32px);
     padding-left: 0;
-    position: relative;  
+    position: relative;
     scroll-margin-top: 200px;
 }
 
@@ -21,11 +21,11 @@ section {
     font-size: 16px;
     font-weight: 700;
     gap: 54px;
+}
 
-    div {
-        @include dFlex($fd: column, $gap: 10px);
-        width: 130px;
-    }
+.single-skill {
+    @include dFlex($fd: column, $gap: 10px);
+    width: 130px;
 
     img {
         height: 60px;
@@ -34,6 +34,27 @@ section {
         &:hover {
             transform: translateY(-10px);
         }
+    }
+}
+
+.growth-mindset {
+    @include dFlex($fd: column, $gap: 10px);
+    width: 135px;
+    position: relative;
+    color: #9747FF;
+    
+    img {
+        transition: transform 300ms ease-in-out;
+
+        &:hover {
+            transform: translateY(-10px);
+        }
+    }
+    .img-special-interest {
+        position: absolute;
+        height: 130px;
+        top:-130px;
+        left: 20px;
     }
 }
 
@@ -151,10 +172,11 @@ aside {
         gap: 16px;
 
     }
+
     .line {
         width: 20px;
     }
-    
+
 }
 
 @media (max-width: 380px) {
@@ -181,5 +203,6 @@ aside {
 
     .greenShadow {
         top: 0px;
-        left: -290px;    }
+        left: -290px;
+    }
 }

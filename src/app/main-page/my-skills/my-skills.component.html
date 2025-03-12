@@ -6,9 +6,16 @@
             </button>
         </div>
         <main class="skillList">
-            <div *ngFor="let skill of skillList">
+            <div class="single-skill" *ngFor="let skill of skillList">
                 <img src="{{ skill.img }}" alt="">
                 <span>{{ skill.name }}</span>
+            </div>
+            <div class="growth-mindset" (mouseenter)="ishovered = true" (mouseleave)="ishovered = false"> 
+                <img src="assets/img/logos/continually-learning.png" alt="">
+                <span>Growth Mindset</span>
+                @if (ishovered) {
+                <img class="img-special-interest" src="assets/img/logos/special_interest_bubble.png" alt="">
+            }
             </div>
         </main>
         <aside>

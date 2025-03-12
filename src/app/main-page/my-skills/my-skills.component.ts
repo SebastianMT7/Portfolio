@@ -12,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class MySkillsComponent {
   currentLanguage: string = 'en';
+  ishovered:boolean = false;
 
   /**
    * Constructor for the component.
