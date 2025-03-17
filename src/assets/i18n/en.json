@@ -1,7 +1,8 @@
 {
   "header": {
     "about": "About",
-    "skills": "Skills"
+    "skills": "Skills",
+    "lang": "GER"
   },
   "atf": {
     "iam": "I am",
@@ -12,12 +13,14 @@
   "about": {
     "headline": "About me",
     "text1": "Hi, I'm Sebastian Torney, a Frontend Developer from Bergwitz. Through working on numerous projects, I have acquired the skills to program both static websites and complex business applications.",
-    "text2": "In implementing innovative ideas, I look forward to collaborating with designers and backend developers. My passion for programming motivates me to stay informed about the latest industry trends and to continuously develop my skills.",
-    "text3": "Programming holds a special place in my heart because it allows me to turn ideas into reality. The ability to create something from nothing, solve complex problems, and constantly learn new technologies is incredibly rewarding."
+    "text2": "",
+    "text3": "In implementing innovative ideas, I look forward to collaborating with designers and backend developers. My passion for programming motivates me to stay informed about the latest industry trends and to continuously develop my skills.",
+    "text4": "Programming holds a special place in my heart because it allows me to turn ideas into reality. The ability to create something from nothing, solve complex problems, and constantly learn new technologies is incredibly rewarding."
   },
   "skills": {
     "headline": "My skills",
     "text": "I have gained experience in building projects with various front end technologies and concepts.",
+    "speech-bubble": "I have a special interest in learning",
     "btn": "Get in touch"
   },
   "projects": {
@@ -43,10 +46,14 @@
     "mail-send1": "Thank you for your message.",
     "mail-send2": "I will get in touch with you shortly."
   },
+  "reviews": {
+    "review1": "Sebastian really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+    "review2": "Sebastian was a top team colleague at DA. His positive commitment and willingness to take on responsibility made a significant contribution to us achieving our goals.",
+    "review3": "It was a great pleasure to work with Sebastian. He knows how to push and encourage team members to present the best work possible, always adding something to brainstorm. Regarding the well-being of group members, he was always present and available to listen and help others, with a great sense of humor as well."
+  },
   "footer": {
     "imprint": "Imprint"
   },
-
   "imprint": {
     "headline": "According to § 5 TMG:",
     "represented": "Vertreten durch: ",
@@ -60,7 +67,6 @@
     "text6": "Privacy",
     "text7": "The use of our website is generally possible without providing personal data. If personal data (e.g. name, address or e-mail addresses) is collected on our website, this is always done on a voluntary basis as far as possible. This data will not be passed on to third parties without your express consent. We would like to point out that data transmission over the Internet (e.g. when communicating by e-mail) may be subject to security vulnerabilities. Complete protection of data against access by third parties is not possible. We hereby expressly prohibit the use of contact data published within the scope of the imprint obligation by third parties for sending unsolicited advertising and information material. The operators of the website expressly reserve the right to take legal action in the event of the unsolicited sending of advertising information, such as spam emails."
   },
-
   "privacy": {
     "headline": "Privacy Policy",
     "country": "Germany",

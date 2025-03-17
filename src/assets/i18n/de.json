@@ -1,7 +1,8 @@
 {
   "header": {
     "about": "Über mich",
-    "skills": "Fähigkeiten"
+    "skills": "Fähigkeiten",
+    "lang": "DE"
   },
   "atf": {
     "iam": "Ich bin",
@@ -12,12 +13,15 @@
   "about": {
     "headline": "Über mich",
     "text1": "Hi, ich bin Sebastian Torney, ein Frontend Entwickler aus Bergwitz. Durch die Arbeit an zahlreichen Projekten habe ich mir die Fähigkeiten angeeignet, sowohl statische Webseiten als auch komplexe Business-Anwendungen zu programmieren.",
-    "text2": "Bei der Umsetzung innovativer Ideen freue ich mich auf die Zusammenarbeit mit Designern und Backend-Entwicklern. Meine Leidenschaft für das Programmieren motiviert mich, über die neuesten Branchentrends informiert zu bleiben und meine Fähigkeiten ständig weiterzuentwickeln.",
-    "text3": "Programmieren hat einen besonderen Platz in meinem Herzen, weil es mir ermöglicht, Ideen in die Realität umzusetzen. Die Fähigkeit, etwas aus dem Nichts zu erschaffen, komplexe Probleme zu lösen und ständig neue Technologien zu erlernen, ist unglaublich bereichernd."
+    "text2":"",
+    "text3": "Bei der Umsetzung innovativer Ideen freue ich mich auf die Zusammenarbeit mit Designern und Backend-Entwicklern. Meine Leidenschaft für das Programmieren motiviert mich, über die neuesten Branchentrends informiert zu bleiben und meine Fähigkeiten ständig weiterzuentwickeln.",
+    "text4": "Programmieren hat einen besonderen Platz in meinem Herzen, weil es mir ermöglicht, Ideen in die Realität umzusetzen. Die Fähigkeit, etwas aus dem Nichts zu erschaffen, komplexe Probleme zu lösen und ständig neue Technologien zu erlernen, ist unglaublich bereichernd."
+    
   },
   "skills": {
     "headline": "Meine Skills",
     "text": "Ich habe meine Fähigkeiten in der Frontend-Entwicklung erweitert, was es mir ermöglicht hat, verschiedene reale Projekte zu erstellen.",
+    "speech-bubble": "Aktuell beschäftige ich mich mit",
     "btn": "Kontakt"
   },
   "projects": {
@@ -42,6 +46,12 @@
     "btn": "Nachricht senden :)",
     "mail-send1": "Vielen Dank für Ihre Ihre Nachricht.",
     "mail-send2": "Ich werde mich in kürze bei Ihnen melden."
+  },
+
+  "reviews": {
+    "review1": "Sebastian hat das Team durch seine großartige Organisation und klare Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "review2": "Sebastian war ein Top-Teamkollege bei DA. Seine Bereitschaft, Verantwortung zu übernehmen, hat maßgeblich dazu beigetragen, dass wir unsere Ziele erreichen konnten.",
+    "review3": "Es war eine große Freude, mit Sebastian zusammenzuarbeiten. Er weiß, wie er Teammitglieder dazu anspornt und ermutigt, die bestmögliche Arbeit zu präsentieren und dem Brainstorming immer etwas hinzuzufügen. Im Hinblick auf das Wohlergehen der Gruppenmitglieder war er stets präsent und bereit, anderen zuzuhören und ihnen zu helfen, außerdem hatte er einen großartigen Sinn für Humor."
   },
 
   "footer": {

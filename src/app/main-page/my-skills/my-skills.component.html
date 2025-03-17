@@ -1,5 +1,5 @@
 <div class="bgSection">
-    <section data-aos="fade-right"  id="my-skills">
+    <section data-aos="fade-right" id="my-skills">
         <div>
             <button class="btnGrowing mobileBtn">
                 <a href="#contact">{{'skills.btn' | translate}}</a>
@@ -7,15 +7,22 @@
         </div>
         <main class="skillList">
             <div class="single-skill" *ngFor="let skill of skillList">
-                <img src="{{ skill.img }}" alt="">
+                <img class="img-skill" src="{{ skill.img }}" alt="">
                 <span>{{ skill.name }}</span>
             </div>
-            <div class="growth-mindset" (mouseenter)="ishovered = true" (mouseleave)="ishovered = false"> 
+            <div class="growth-mindset" (mouseenter)="ishovered = true" (mouseleave)="ishovered = false">
                 <img src="assets/img/logos/continually-learning.png" alt="">
                 <span>Growth Mindset</span>
+
                 @if (ishovered) {
-                <img class="img-special-interest" src="assets/img/logos/special_interest_bubble.png" alt="">
-            }
+                <div class="bubble">
+                    <div class="bubble-text">
+                        <p>{{ 'skills.speech-bubble' | translate }}</p>
+                        <img src="assets/img/react-vue.png" alt="">
+                    </div>
+                    <img class="triangle" src="assets/img/forms/triangle.png" alt="">
+                </div>
+                }
             </div>
         </main>
         <aside>

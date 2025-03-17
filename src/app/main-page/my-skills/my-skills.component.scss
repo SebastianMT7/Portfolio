@@ -27,7 +27,7 @@ section {
     @include dFlex($fd: column, $gap: 10px);
     width: 130px;
 
-    img {
+    .img-skill {
         height: 60px;
         transition: transform 300ms ease-in-out;
 
@@ -42,21 +42,30 @@ section {
     width: 135px;
     position: relative;
     color: #9747FF;
-    
-    img {
-        transition: transform 300ms ease-in-out;
+}
 
-        &:hover {
-            transform: translateY(-10px);
-        }
-    }
-    .img-special-interest {
-        position: absolute;
-        height: 130px;
-        top:-130px;
-        left: 20px;
+.bubble {
+    @include dFlex($fd: column);
+    padding: 8px 10px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    width: 190px;
+    position: absolute;
+    top: -145px;
+    left: 27px;
+
+    .bubble-text{
+        @include dFlex($fd: column, $gap: 10px);
     }
 }
+
+.triangle {
+    position: absolute;
+    left: 27px;
+    bottom: -15px;
+}
+
 
 aside {
     @include dFlex($fd: column, $gap: 57px);
@@ -91,7 +100,6 @@ aside {
     flex-grow: 1;
     width: 58px;
 }
-
 
 .greenShadow {
     position: absolute;
@@ -152,8 +160,7 @@ aside {
             flex-wrap: wrap;
             gap: 40px;
 
-
-            img {
+            .img-skill {
                 height: 40px;
             }
         }
@@ -176,7 +183,6 @@ aside {
     .line {
         width: 20px;
     }
-
 }
 
 @media (max-width: 380px) {
@@ -188,11 +194,6 @@ aside {
 
     .skillList {
         gap: 30px;
-
-
-        img {
-            height: 40px;
-        }
     }
 
     .lineDiv {
@@ -204,5 +205,16 @@ aside {
     .greenShadow {
         top: 0px;
         left: -290px;
+    }
+
+    .bubble {
+        top: -140px;
+        left: 10px;
+    }
+    
+    .triangle {
+        height: 10px;
+        left: 50px;
+        bottom: -10px;
     }
 }

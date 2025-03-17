@@ -31,7 +31,7 @@ main {
     @include dFlex($ai: null, $jc: null, $fd: column, $gap: 35px);
 
     div {
-        display: flex;
+        @include dFlex();
         padding-left: 27px;
         gap: 35px;
     }

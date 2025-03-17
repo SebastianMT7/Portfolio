@@ -1,6 +1,5 @@
 
 import { Component, OnInit } from '@angular/core';
-// import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
@@ -13,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 
 export class HeaderComponent implements OnInit {
+  isGerman?: boolean;
   currentLanguage: string = 'en';
   menuOpen: boolean = false;
 
@@ -39,6 +39,13 @@ export class HeaderComponent implements OnInit {
   changeLanguage(language: string) {
     this.currentLanguage = language;
     this.translate.use(language);
+  }
+
+  toggleLanguage(event: Event): void {
+    const isChecked = (event.target as HTMLInputElement).checked;
+    const language = isChecked ? 'de' : 'en'; // Wechsel zwischen Deutsch und Englisch
+    this.translate.use(language)
+    this.isGerman = isChecked; 
   }
 
   /**

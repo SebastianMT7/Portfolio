@@ -1,0 +1,94 @@
+@import './../../../styles.scss';
+
+section {
+    @include dFlex($fd: column, $gap: 32px);
+    padding: 0 100px 50px 100px;
+
+    @media (max-width: 950px) {
+        padding-right: 50px;
+    }
+
+    @media (max-width: 750px) {
+        padding-left: 50px;
+    }
+
+    @media (max-width: 580px) {
+        gap: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.review-box {
+    @include dFlex($fd: column, $ai: flex-start, $gap: 44px);
+    position: relative;
+    border: 4px solid rgb(112, 230, 28);
+    border-radius: 32px;
+    padding: 48px 96px;
+
+    img {
+        position: absolute;
+        top: -40px;
+        left: -70px;
+    }
+
+    @media (max-width: 950px) {
+        padding: 36px 48px;
+    }
+
+    @media (max-width: 750px) {
+        img {
+            top: -65px;
+            left: -20px;
+        }
+    }
+    @media (max-width: 580px) {
+        gap: 24px;
+        padding: 16px 16px;
+    }
+}
+
+.name-box {
+    @include dFlex($jc: flex-start);
+    gap: 16px;
+    width: 100%;
+
+    .line {
+        background-color: $purple;
+        border: unset;
+        height: 4px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    span {
+        text-wrap: nowrap;
+    }
+
+    @media (max-width: 450px) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .line {
+            width: 20%;
+        }
+    }
+}
+
+
+.nav-bar {
+    @include dFlex($gap: 20px);
+}
+
+.arrow-box {
+    @include dFlex();
+    cursor: pointer;
+
+    &:hover {
+        svg {
+            rect {
+                stroke: $green;
+            }
+        }
+    }
+}

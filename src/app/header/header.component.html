@@ -9,8 +9,13 @@
             <a href="#about-me">{{'header.about' | translate}}</a>
             <a href="#my-skills">{{'header.skills' | translate}}</a>
             <a href="#portfolio">Portfolio</a>
-            <img (click)="changeLanguage('de')" src="/assets/img/german.png" alt="german">
-            <img (click)="changeLanguage('en')" src="/assets/img/english.png" alt="english">
+            <div class="toggle-button-cover" (click)="toggleLanguage($event)">
+                <div id="btn-toggle" class="btn-box">
+                    <input class="checkbox" type="checkbox">
+                    <div class="de"></div>
+                    <div class="eng"></div>
+                </div>
+            </div>
         </div>
 
         <div class="burgerMenu" [class.d-none]="menuOpen" (click)="toggleMenu()">
@@ -32,9 +37,9 @@
                 <a href="#about-me">{{'header.about' | translate}} </a>
                 <a href="#my-skills">{{'header.skills' | translate}}</a>
                 <a href="#portfolio">Portfolio</a>
-                <div>
-                    <img (click)="changeLanguage('de')" src="/assets/img/german.png" alt="german">
-                    <img (click)="changeLanguage('en')" src="/assets/img/english.png" alt="english">
+                <div >
+                    <p (click)="changeLanguage('en')">EN</p>/
+                    <p (click)="changeLanguage('de')">{{'header.lang' | translate}}</p>
                 </div>
             </div>
         </div>
