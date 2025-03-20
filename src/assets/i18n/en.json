@@ -12,10 +12,10 @@
   },
   "about": {
     "headline": "About me",
-    "text1": "Hi, I'm Sebastian Torney, a Frontend Developer from Bergwitz. Through working on numerous projects, I have acquired the skills to program both static websites and complex business applications.",
-    "text2": "",
-    "text3": "In implementing innovative ideas, I look forward to collaborating with designers and backend developers. My passion for programming motivates me to stay informed about the latest industry trends and to continuously develop my skills.",
-    "text4": "Programming holds a special place in my heart because it allows me to turn ideas into reality. The ability to create something from nothing, solve complex problems, and constantly learn new technologies is incredibly rewarding."
+    "text1": "Hi, I'm Sebastian Torney, a passionate front-end developer from Bergwitz. Motivated by the unlimited possibilities in IT, I'm excited to design visually appealing and intuitive websites and applications.",
+    "text2": "I'm flexible with different work models. I can work effectively both remotely and on-site.",
+    "text3": "I am always open to new challenges and strive to continuously expand my knowledge and skills.",
+    "text4": "My approach to problem-solving is based on analytical thinking, creativity, and perseverance. I view every challenge as an opportunity to learn and develop my skills. I place great emphasis on finding efficient and elegant solutions. Through collaboration and exchange with others, I can incorporate diverse perspectives and achieve optimal results."
   },
   "skills": {
     "headline": "My skills",

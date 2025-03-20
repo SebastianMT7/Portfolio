@@ -31,7 +31,7 @@ main {
     @include dFlex($ai: null, $jc: null, $fd: column, $gap: 35px);
 
     div {
-        @include dFlex();
+        @include dFlex($jc: flex-start);
         padding-left: 27px;
         gap: 35px;
     }
@@ -127,12 +127,19 @@ aside {
         padding: 100px 25px 130px 25px;
         scroll-margin-top: 90px;
     }
+
+    .infos div {
+        padding-left: 0;
+    }
+
 }
 
 @media (max-width: 380px) {
-    main {
-        h2 {
-            font-size: 40px;
-        }
+    main h2 {
+        font-size: 40px;
+    }
+
+    .infos div {
+        gap: 10px;
     }
 }

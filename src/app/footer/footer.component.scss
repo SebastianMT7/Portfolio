@@ -7,8 +7,7 @@ section {
 
 footer {
     @include dFlex($jc: space-between);
-    height: 290px;
-    padding: 121px 100px;
+    padding: 50px 100px;
     max-width: $maxContent;
     margin-inline: auto;
 
